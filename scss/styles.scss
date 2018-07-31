@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Quicksand');
+@import "mixins.scss";
+
+// My variables
+$font-main: 'Quicksand', sans-serif;
+$font-heading: 'Comfortaa', cursive;
+$light-apricot: #FCD7AD;
+$macaroni: #F6C28B;
+$copper-red: #CE6C47;
+$cadet-blue: #5296A5;
+$sky-blue: #82DDF0;
+$independence: #534966;
+$brown: #280004;
+$standart-padding: 2% 5%;
+$small-padding: 1% 2%;
+$big-padding: 5% 7%;
+$comfortaa: 'Comfortaa', cursive;
+
+/*=============GENERAL================*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-main;
+  // background-color: $light-apricot;
+  font-size: 20px;
+  color: $brown;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg {
+  @include transition(all 0.3s linear);
+  &:focus {
+    @include scale(1.2);
+    outline: 0;
+  }
+}
+
+%flexbox {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+%main-heading {
+  width: 100%;
+  text-align: right;
+  font-family: $comfortaa;
+  letter-spacing: 10px;
+  font-size: 1.7em;
+  padding: $standart-padding;
+  @media screen and (min-width: 1000px) {
+    text-align: left;
+    padding: $small-padding;
+  }
+}
+/*=============HEADER==============*/
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/wide-home.gif);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include flexbox;
+  @include align-items(flex-start);
+  @include justify-content(center);
+  @media screen and (min-width: 650px) {
+    @include align-items(center);
+  }
+  .info-box {
+    @extend %flexbox;
+    @include flex-direction(column);
+    text-align: center;
+    width: 100%;
+    color: $brown;
+    padding-top: 20px;
+    line-height: 1.7em;
+    @include linear-gradient(rgba(242,246,248,1), rgba(216,225,231,0.75), rgba(181,198,208,0.75), rgba(224,239,249,0.5));
+    border: 1px solid white;
+    border-image-source: linear-gradient(#b5c6d0, white);
+    border-image-slice: 20;
+    @include box-shadow;
+    @media screen and (min-width: 650px) {
+      width: 450px;
+    }
+    h1 {
+      font-size: 1em;
+      font-weight: normal;
+      font-family: $comfortaa;
+    }
+    h2 {
+      letter-spacing: 15px;
+      font-family: $comfortaa;
+      text-transform: uppercase;
+      font-size: 1em;
+    }
+    a:last-child {
+      @extend %floating;
+    }
+  }
+}
+
+/*==============NAVIGATION========*/
+nav {
+  @extend %flexbox;
+  @include flex-direction(row);
+  width: 100%;
+  background: $brown;
+  padding: 8px 10px;
+  height: 65px;
+  @media screen and (min-width: 650px) {
+    padding: 5px 7px;
+  }
+  a {
+    @extend %flexbox;
+    padding: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: $light-apricot;
+    font-size: 16px;
+    height: 65px;
+    @media screen and (min-width: 650px) {
+      margin-right: 25px;
+      margin-left: 25px;
+    }
+    p {
+      display: none;
+    }
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.sticky + main {
+  padding-top: 60px;
+}
+/*============ABOUT and SKILLS ==========*/
+#about {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+  @include flex-direction(column);
+  padding: 10% 5% 2% 5%;
+  @media screen and (min-width: 1000px) {
+    padding: 5% 5% 0% 5%;
+  }
+  article {
+    max-width: 800px;
+    margin-top: 15px;
+    @extend %flexbox;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @media screen and (min-width: 1000px) {
+      // @include flex(50%);
+      // margin-top: 0;
+    }
+    h2 {
+      @include flex(100%);
+      @extend %main-heading;
+    }
+    p {
+      text-align: justify;
+      padding: $standart-padding;
+    }
+    div {
+      @media screen and (min-width: 1000px) {
+        @include flex(60%);
+      }
+    }
+    img {
+      border-radius: 50%;
+      max-width: 150px;
+      margin-left: 50%;
+      @media screen and (min-width: 650px) {
+        margin-left: 70%;
+      }
+      @media screen and (min-width: 1000px) {
+        @include flex(35%);
+        margin-left: 0;
+        max-width: 250px;
+      }
+    }
+  }
+  svg {
+    max-width: 650px;
+    padding: $standart-padding;
+    @media screen and (min-width: 1000px) {
+      padding: 2% 5% 0 5%;
+    }
+  }
+}
+
+/*==============SKILLS============*/
+.skill path:first-child {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.skill path:first-child:hover {
+  opacity: 1;
+}
+
+.tooltip {
+  visibility: hidden;
+  @include transition(all 0.3s linear);
+}
+
+.display {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform-origin: 50%;
+  -webkit-transform-origin: 50%;
+  @extend %fadeIn;
+}
+
+.highlight {
+  cursor: default !important;
+  opacity: 1 !important;
+}
+
+.bMask {@include skill-animation(1s, lineral, 50% 100%, rightAnimation); visibility: visible !important;}
+.htmlMask {@include skill-animation(1.25s, lineral,50% 100%, rightAnimation); visibility: visible !important;}
+.wpMask {@include skill-animation(1.5s, lineral,50% 100%, rightAnimation); visibility: visible !important;}
+.jqMask {@include skill-animation(1.75s, lineral,0 50%, rightAnimation);visibility: visible !important;}
+.gitMask {@include skill-animation(2s, lineral, 50% 0, rightAnimation); visibility: visible !important;}
+.jsMask {@include skill-animation(2.25s, lineral, 50% 0, rightAnimation); visibility: visible !important;}
+.cssMask {@include skill-animation(2.5s, lineral, 50% 0, rightAnimation); visibility: visible !important;}
+.rMask {@include skill-animation(2.75s, lineral, 50% 0, rightAnimation); visibility: visible !important;}
+.sassMask {@include skill-animation(3s, lineral, 100% 50%, rightAnimation); visibility: visible !important;}
+.ilMask {@include skill-animation(3.25s, lineral,100% 50%, rightAnimation); visibility: visible !important;}
+
+/*===========PORTFOLIO===================*/
+#projects {
+  h2 {
+    @extend %main-heading;
+  }
+}
+
+.panels {
+  @extend %flexbox;
+  @include flex-direction(column);
+  height: 800px;
+  width: 100%;
+  @media screen and (min-width: 900px) {
+    @include flex-direction(row);
+    height: 500px;
+  }
+}
+
+.panel {
+  overflow: hidden;
+  transition: flex 0.3s ease-out;
+  height: auto;
+  flex: 1;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(flex-start);
+  @include flex-direction(column);
+  @include align-items(center);
+  text-align: center;
+  @media screen and (min-width: 900px) {
+    height: 100%;
+  }
+  img {
+    max-width: 80%;
+    @media screen and (min-width: 450px) {
+      max-width: 60%;
+    }
+    @media screen and (min-width: 650px) {
+      max-width: 350px;
+    }
+  }
+  h3 {
+    transition: 0.4s ease-out;
+    text-transform: uppercase;
+    font-family: $comfortaa;
+    letter-spacing: 6px;
+    font-size: 0.9em;
+    padding: 63px 10px 0 10px;
+  }
+  article {
+    @extend %flexbox;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    text-align: center;
+    padding: $standart-padding;
+    p {
+      @include flex(100%);
+      font-size: 0.9em;
+    }
+    a {
+      @include flex(30%);
+      font-size: 0.8em;
+      max-width: 150px;
+      padding: $standart-padding;
+      margin: 10px;
+      background: $brown;
+      color: white;
+      &:hover,
+      &:focus {
+        background: $copper-red;
+        outline: 0;
+      }
+    }
+  }
+}
+
+.panel1 {
+  background: $macaroni;
+  &:hover {
+    background: #f6dfc6;
+  }
+}
+.panel2 {
+  background: $cadet-blue;
+  &:hover {
+    background: #a7d5df;
+  }
+}
+.panel3 {
+  background: #8A829E;
+  &:hover {
+    background: #c6c2d0;
+  }
+}
+
+.panel.open {
+  flex: 7;
+  @media screen and (min-width: 900px) {
+    flex: 5;
+  }
+}
+
+.panel > * {
+  margin:0;
+  width: 100%;
+  transition: transform 0.5s;
+  flex: 20% 40% 40%;
+  @extend %flexbox;
+}
+
+.panel.openActive > *:first-child { padding-top: 20px }
+.panel > *:nth-child(2) { opacity: 0; }
+.panel.openActive > *:nth-child(2) { @extend %fadeIn; opacity: 1;}
+.panel > *:last-child { transform: translateX(100%); }
+.panel.openActive > *:last-child { transform: translateX(0); }
+
+/*===========CONTACT & FOOTER====================*/
+#contact {
+  height: 300px;
+  h2 {
+    @extend %main-heading;
+    margin-top: 55px;
+  }
+  article {
+    position: relative;
+    bottom: -40px;
+    z-index: 50;
+    @extend %flexbox;
+    @include flex-direction(column);
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background: $light-apricot;
+    height: 250px;
+    @media screen and (min-width: 450px) {
+      @include flex-direction(row);
+    }
+    @media screen and (min-width: 650px) {
+      width: 65%;
+    }
+    @media screen and (min-width:1000px) {
+      width: 50%;
+      bottom: -10px;
+    }
+    p {
+      letter-spacing: 3px;
+    }
+    div {
+      @include flex(1);
+    }
+    .emial-button {
+      background: $brown;
+      color: white;
+      padding: 17px 25px;
+      &:hover,
+      &:focus {
+        background: $copper-red;
+        outline: 0;
+      }
+    }
+  }
+}
+
+footer {
+  z-index: 20;
+  background: $brown;
+  color: $copper-red;
+  @extend %flexbox;
+  @include flex-direction(column);
+  height: 200px;
+  font-size: 0.8em;
+  a {
+    color: $light-apricot;
+    &:hover,
+    &:focus {
+      color: white;
+      text-decoration: underline;
+      outline: 0;
+    }
+  }
+}
+
+/*===========ANIMATIONS==================*/
+@keyframes rightAnimation {
+  0% { transform: rotate(180deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes rightAnimation {
+	0% {-webkit-transform: rotate(180deg);}
+	50% {-webkit-transform: rotate(180deg);}
+	100% {-webkit-transform: rotate(180deg);}
+}
+
+@-moz-keyframes rightAnimation {
+  0% { -moz-transform: rotate(180deg); }
+  50% { -moz-transform: rotate(180deg); }
+  100% { -moz-transform: rotate(360deg); }
+}
+
+/*reference: Made by Justin Aguilar www.justinaguilar.com/animations/ */
+%floating{
+	animation-name: floating;
+	-webkit-animation-name: floating;
+
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+	0% {transform: translateY(0%);}
+	50% {transform: translateY(8%);}
+	100% {transform: translateY(0%);}
+}
+
+@-webkit-keyframes floating {
+	0% {-webkit-transform: translateY(0%);}
+	50% {-webkit-transform: translateY(8%);}
+	100% {-webkit-transform: translateY(0%);}
+}
+
+@-moz-keyframes floating {
+	0% {-moz-transform: translateY(0%);}
+	50% {-moz-transform: translateY(8%);}
+	100% {-moz-transform: translateY(0%);}
+}
+
+%fadeIn{
+	animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;
+
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+
+	animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+
+	visibility: visible !important;
+}
+
+@keyframes fadeIn {
+	0% {
+		transform: scale(0);
+		opacity: 0.0;
+	}
+	60% {
+		transform: scale(1.1);
+	}
+	80% {
+		transform: scale(0.9);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		-webkit-transform: scale(0);
+		opacity: 0.0;
+	}
+	60% {
+		-webkit-transform: scale(1.1);
+	}
+	80% {
+		-webkit-transform: scale(0.9);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadeIn {
+	0% {
+		-moz-transform: scale(0);
+		opacity: 0.0;
+	}
+	60% {
+		-moz-transform: scale(1.1);
+	}
+	80% {
+		-moz-transform: scale(0.9);
+		opacity: 1;
+	}
+	100% {
+		-moz-transform: scale(1);
+		opacity: 1;
+	}
+}

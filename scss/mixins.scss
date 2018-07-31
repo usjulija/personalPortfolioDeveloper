@@ -1,0 +1,115 @@
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+// <positive-number>, initial, auto, or none
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+     -moz-box-flex: $values;
+      -webkit-flex: $values;
+  	  -ms-flex: $values;
+  	      flex: $values;
+}
+
+// row | row-reverse | column | column-reverse
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+     -moz-flex-direction: $direction;
+      -ms-flex-direction: $direction;
+          flex-direction: $direction;
+}
+
+// nowrap | wrap | wrap-reverse
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+     -moz-flex-wrap: $wrap;
+      -ms-flex-wrap: $wrap;
+          flex-wrap: $wrap;
+}
+
+// <flex-direction> || <flex-wrap>
+@mixin flex-flow($flow) {
+  -webkit-flex-flow: $flow;
+     -moz-flex-flow: $flow;
+      -ms-flex-flow: $flow;
+          flex-flow: $flow;
+}
+
+// flex-start | flex-end | center | space-between | space-around
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+     -moz-justify-content: $justify;
+      -ms-justify-content: $justify;
+          justify-content: $justify;
+            -ms-flex-pack: $justify;
+}
+
+// flex-start | flex-end | center | space-between | space-around | stretch
+@mixin align-content($align) {
+  -webkit-align-content: $align;
+     -moz-align-content: $align;
+      -ms-align-content: $align;
+          align-content: $align;
+}
+
+// flex-start | flex-end | center | baseline | stretch
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+     -moz-align-items: $align;
+      -ms-align-items: $align;
+          align-items: $align;
+}
+
+@mixin linear-gradient($color1, $color2, $color3, $color4) {
+  background: $color1;
+	background: -moz-linear-gradient(45deg, $color1 0%, $color2 50%, $color3 51%, $color4 100%);
+	background: -webkit-gradient(left bottom, right top, color-stop(0%,$color1), color-stop(50%,$color2), color-stop(51%, $color3), color-stop(100%, $color4));
+	background: -webkit-linear-gradient(45deg, $color1 0%, $color2 50%, $color3 51%, $color4 100%);
+	background: -o-linear-gradient(45deg, $color1 0%, $color2 50%, $color3 51%, $color4 100%);
+	background: -ms-linear-gradient(45deg, $color1 0%, $color2 50%, $color3 51%, $color4 100%);
+	background: linear-gradient(45deg, $color1 0%, $color2 50%, $color3 51%, $color4 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$color1}, endColorstr=#{$color4})
+}
+
+@mixin box-shadow( $horiz : 0 , $vert : 10px , $blur : 19px , $spread : -2px , $color : rgba(0,0,0,0.28) ){
+  -webkit-box-shadow: $horiz $vert $blur $spread $color;
+  -moz-box-shadow: $horiz $vert $blur $spread $color;
+  box-shadow: $horiz $vert $blur $spread $color;
+}
+
+@mixin skill-animation ($time, $direction, $origin, $name) {
+  animation-duration: $time;
+  -webkit-animation-duration: $time;
+
+  animation-timing-function: $direction;
+  -webkit-animation-timing-function: $direction;
+
+  transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+
+  animation-name: $name;
+  -webkit-animation-name: $name;
+}
