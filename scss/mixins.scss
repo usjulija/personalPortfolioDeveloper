@@ -10,6 +10,7 @@
 	-webkit-transform: $transforms;
 	-moz-transform: $transforms;
 	-ms-transform: $transforms;
+  -o-transform: $transforms;
 	transform: $transforms;
 }
 
@@ -100,7 +101,7 @@
   box-shadow: $horiz $vert $blur $spread $color;
 }
 
-@mixin skill-animation ($time, $direction, $origin, $name) {
+@mixin skill-animation ($time: 1.5s, $direction: ease-in-out, $origin: 50%, $name: rightAnimation) {
   animation-duration: $time;
   -webkit-animation-duration: $time;
 

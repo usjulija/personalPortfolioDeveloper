@@ -31,7 +31,7 @@ const navbar = document.getElementById('navbar');
 const navbarOnTop = navbar.offsetTop;
 
 const stickyNavbar = () => {
-  window.pageYOffset >= navbarOnTop ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+  window.scrollY >= navbarOnTop ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
 };
 
 //hover on skills section
@@ -56,35 +56,6 @@ skills.forEach((skill) => {
     base.classList.add('highlight');
   });
 });
-
-const aboutContainer = document.getElementById("about");
-const topOfSection = aboutContainer.offsetTop;
-
-const fireSkillFunction = () => {
-  if (window.pageYOffset >= topOfSection) {
-    document.getElementById("bMask").classList.add("bMask");
-    document.getElementById("htmlMask").classList.add("htmlMask");
-    document.getElementById("wpMask").classList.add("wpMask");
-    document.getElementById("jqMask").classList.add("jqMask");
-    document.getElementById("gitMask").classList.add("gitMask");
-    document.getElementById("jsMask").classList.add("jsMask");
-    document.getElementById("cssMask").classList.add("cssMask");
-    document.getElementById("rMask").classList.add("rMask");
-    document.getElementById("sassMask").classList.add("sassMask");
-    document.getElementById("ilMask").classList.add("ilMask");
-  } else {
-    document.getElementById("bMask").classList.remove("bMask");
-    document.getElementById("htmlMask").classList.remove("htmlMask");
-    document.getElementById("wpMask").classList.remove("wpMask");
-    document.getElementById("jqMask").classList.remove("jqMask");
-    document.getElementById("gitMask").classList.remove("gitMask");
-    document.getElementById("jsMask").classList.remove("jsMask");
-    document.getElementById("cssMask").classList.remove("cssMask");
-    document.getElementById("rMask").classList.remove("rMask");
-    document.getElementById("sassMask").classList.remove("sassMask");
-    document.getElementById("ilMask").classList.remove("ilMask");
-  }
-};
 
 //portfolio part
 const panels = document.querySelectorAll('.panel');
@@ -113,7 +84,6 @@ panels.forEach(panel => panel.addEventListener('click', event => {
 
 //on scroll effects
 window.onscroll = function(){
-  fireSkillFunction();
   stickyNavbar();
   reset();
 };

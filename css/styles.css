@@ -20,11 +20,15 @@ svg {
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear; }
   svg:focus {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
     outline: 0; }
+
+a:focus {
+  outline: 0; }
 
 header .info-box, nav, nav a, #about article, .panels, .panel article, .panel > *, #contact article, footer {
   display: -webkit-box;
@@ -58,9 +62,8 @@ header .info-box, nav, nav a, #about article, .panels, .panel article, .panel > 
 header {
   width: 100%;
   height: 100vh;
-  background-image: url(../images/wide-home.gif);
+  background-image: url(../images/back-small.svg);
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   display: -webkit-box;
@@ -82,7 +85,8 @@ header {
       -webkit-align-items: center;
       -moz-align-items: center;
       -ms-align-items: center;
-      align-items: center; } }
+      align-items: center;
+      background-image: url(../images/wide-home.gif); } }
   header .info-box {
     -webkit-flex-direction: column;
     -moz-flex-direction: column;
@@ -179,18 +183,25 @@ nav {
   padding: 10% 5% 2% 5%; }
   @media screen and (min-width: 1000px) {
     #about {
-      padding: 5% 5% 0% 5%; } }
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      padding: 1% 5% 0% 5%; } }
   #about article {
     max-width: 800px;
     margin-top: 15px;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    @media screen and (min-width: 1000px) {
+      #about article {
+        -webkit-box-flex: 50%;
+        -moz-box-flex: 50%;
+        -webkit-flex: 50%;
+        -ms-flex: 50%;
+        flex: 50%; } }
     #about article h2 {
       -webkit-box-flex: 100%;
       -moz-box-flex: 100%;
@@ -207,28 +218,17 @@ nav {
         -webkit-flex: 60%;
         -ms-flex: 60%;
         flex: 60%; } }
-    #about article img {
-      border-radius: 50%;
-      max-width: 150px;
-      margin-left: 50%; }
-      @media screen and (min-width: 650px) {
-        #about article img {
-          margin-left: 70%; } }
-      @media screen and (min-width: 1000px) {
-        #about article img {
-          -webkit-box-flex: 35%;
-          -moz-box-flex: 35%;
-          -webkit-flex: 35%;
-          -ms-flex: 35%;
-          flex: 35%;
-          margin-left: 0;
-          max-width: 250px; } }
   #about svg {
     max-width: 650px;
     padding: 2% 5%; }
     @media screen and (min-width: 1000px) {
       #about svg {
-        padding: 2% 5% 0 5%; } }
+        padding: 2% 5% 0 5%;
+        -webkit-box-flex: 40%;
+        -moz-box-flex: 40%;
+        -webkit-flex: 40%;
+        -ms-flex: 40%;
+        flex: 40%; } }
 
 /*==============SKILLS============*/
 .skill path:first-child {
@@ -256,112 +256,112 @@ nav {
   cursor: default !important;
   opacity: 1 !important; }
 
-.bMask {
-  animation-duration: 1s;
-  -webkit-animation-duration: 1s;
-  animation-timing-function: lineral;
-  -webkit-animation-timing-function: lineral;
-  transform-origin: 50% 100%;
-  -webkit-transform-origin: 50% 100%;
-  animation-name: rightAnimation;
-  -webkit-animation-name: rightAnimation;
-  visibility: visible !important; }
-
-.htmlMask {
-  animation-duration: 1.25s;
-  -webkit-animation-duration: 1.25s;
-  animation-timing-function: lineral;
-  -webkit-animation-timing-function: lineral;
-  transform-origin: 50% 100%;
-  -webkit-transform-origin: 50% 100%;
-  animation-name: rightAnimation;
-  -webkit-animation-name: rightAnimation;
-  visibility: visible !important; }
-
-.wpMask {
+#bMask {
   animation-duration: 1.5s;
   -webkit-animation-duration: 1.5s;
-  animation-timing-function: lineral;
-  -webkit-animation-timing-function: lineral;
-  transform-origin: 50% 100%;
-  -webkit-transform-origin: 50% 100%;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  transform-origin: 50%;
+  -webkit-transform-origin: 50%;
   animation-name: rightAnimation;
   -webkit-animation-name: rightAnimation;
   visibility: visible !important; }
 
-.jqMask {
-  animation-duration: 1.75s;
-  -webkit-animation-duration: 1.75s;
-  animation-timing-function: lineral;
-  -webkit-animation-timing-function: lineral;
-  transform-origin: 0 50%;
-  -webkit-transform-origin: 0 50%;
+#htmlMask {
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  transform-origin: 50%;
+  -webkit-transform-origin: 50%;
   animation-name: rightAnimation;
   -webkit-animation-name: rightAnimation;
   visibility: visible !important; }
 
-.gitMask {
-  animation-duration: 2s;
-  -webkit-animation-duration: 2s;
-  animation-timing-function: lineral;
-  -webkit-animation-timing-function: lineral;
-  transform-origin: 50% 0;
-  -webkit-transform-origin: 50% 0;
+#wpMask {
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  transform-origin: 50%;
+  -webkit-transform-origin: 50%;
   animation-name: rightAnimation;
   -webkit-animation-name: rightAnimation;
   visibility: visible !important; }
 
-.jsMask {
-  animation-duration: 2.25s;
-  -webkit-animation-duration: 2.25s;
-  animation-timing-function: lineral;
-  -webkit-animation-timing-function: lineral;
-  transform-origin: 50% 0;
-  -webkit-transform-origin: 50% 0;
+#jqMask {
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  transform-origin: 50%;
+  -webkit-transform-origin: 50%;
   animation-name: rightAnimation;
   -webkit-animation-name: rightAnimation;
   visibility: visible !important; }
 
-.cssMask {
-  animation-duration: 2.5s;
-  -webkit-animation-duration: 2.5s;
-  animation-timing-function: lineral;
-  -webkit-animation-timing-function: lineral;
-  transform-origin: 50% 0;
-  -webkit-transform-origin: 50% 0;
+#gitMask {
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  transform-origin: 50%;
+  -webkit-transform-origin: 50%;
   animation-name: rightAnimation;
   -webkit-animation-name: rightAnimation;
   visibility: visible !important; }
 
-.rMask {
-  animation-duration: 2.75s;
-  -webkit-animation-duration: 2.75s;
-  animation-timing-function: lineral;
-  -webkit-animation-timing-function: lineral;
-  transform-origin: 50% 0;
-  -webkit-transform-origin: 50% 0;
+#jsMask {
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  transform-origin: 50%;
+  -webkit-transform-origin: 50%;
   animation-name: rightAnimation;
   -webkit-animation-name: rightAnimation;
   visibility: visible !important; }
 
-.sassMask {
-  animation-duration: 3s;
-  -webkit-animation-duration: 3s;
-  animation-timing-function: lineral;
-  -webkit-animation-timing-function: lineral;
-  transform-origin: 100% 50%;
-  -webkit-transform-origin: 100% 50%;
+#cssMask {
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  transform-origin: 50%;
+  -webkit-transform-origin: 50%;
   animation-name: rightAnimation;
   -webkit-animation-name: rightAnimation;
   visibility: visible !important; }
 
-.ilMask {
-  animation-duration: 3.25s;
-  -webkit-animation-duration: 3.25s;
-  animation-timing-function: lineral;
-  -webkit-animation-timing-function: lineral;
-  transform-origin: 100% 50%;
-  -webkit-transform-origin: 100% 50%;
+#rMask {
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  transform-origin: 50%;
+  -webkit-transform-origin: 50%;
+  animation-name: rightAnimation;
+  -webkit-animation-name: rightAnimation;
+  visibility: visible !important; }
+
+#sassMask {
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  transform-origin: 50%;
+  -webkit-transform-origin: 50%;
+  animation-name: rightAnimation;
+  -webkit-animation-name: rightAnimation;
+  visibility: visible !important; }
+
+#ilMask {
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  transform-origin: 50%;
+  -webkit-transform-origin: 50%;
   animation-name: rightAnimation;
   -webkit-animation-name: rightAnimation;
   visibility: visible !important; }
@@ -372,7 +372,7 @@ nav {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 800px;
+  height: 900px;
   width: 100%; }
   @media screen and (min-width: 900px) {
     .panels {
@@ -380,7 +380,10 @@ nav {
       -moz-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-      height: 500px; } }
+      height: 600px; } }
+  @media screen and (min-width: 1150px) {
+    .panels {
+      height: 520px; } }
 
 .panel {
   overflow: hidden;
@@ -499,10 +502,32 @@ nav {
   opacity: 1; }
 
 .panel > *:last-child {
-  transform: translateX(100%); }
+  -webkit-transform: translateX(110%);
+  -moz-transform: translateX(110%);
+  -ms-transform: translateX(110%);
+  -o-transform: translateX(110%);
+  transform: translateX(110%); }
+  @media screen and (min-width: 900px) {
+    .panel > *:last-child {
+      -webkit-transform: translateY(110%);
+      -moz-transform: translateY(110%);
+      -ms-transform: translateY(110%);
+      -o-transform: translateY(110%);
+      transform: translateY(110%); } }
 
 .panel.openActive > *:last-child {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
   transform: translateX(0); }
+  @media screen and (min-width: 900px) {
+    .panel.openActive > *:last-child {
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+      transform: translateY(0); } }
 
 /*===========CONTACT & FOOTER====================*/
 #contact {
@@ -571,27 +596,27 @@ footer {
 /*===========ANIMATIONS==================*/
 @keyframes rightAnimation {
   0% {
-    transform: rotate(180deg); }
-  50% {
-    transform: rotate(180deg); }
+    transform: scale(0);
+    opacity: 0.0; }
   100% {
-    transform: rotate(360deg); } }
+    transform: scale(1);
+    opacity: 1; } }
 
 @-webkit-keyframes rightAnimation {
   0% {
-    -webkit-transform: rotate(180deg); }
-  50% {
-    -webkit-transform: rotate(180deg); }
+    -webkit-transform: scale(0);
+    opacity: 0.0; }
   100% {
-    -webkit-transform: rotate(180deg); } }
+    -webkit-transform: scale(1);
+    opacity: 1; } }
 
 @-moz-keyframes rightAnimation {
   0% {
-    -moz-transform: rotate(180deg); }
-  50% {
-    -moz-transform: rotate(180deg); }
+    -moz-transform: scale(0);
+    opacity: 0.0; }
   100% {
-    -moz-transform: rotate(360deg); } }
+    -moz-transform: scale(1);
+    opacity: 1; } }
 
 /*reference: Made by Justin Aguilar www.justinaguilar.com/animations/ */
 header .info-box a:last-child {

@@ -37,9 +37,13 @@ a {
 svg {
   @include transition(all 0.3s linear);
   &:focus {
-    @include scale(1.2);
+    @include scale(1.1);
     outline: 0;
   }
+}
+
+a:focus {
+  outline: 0;
 }
 
 %flexbox {
@@ -64,9 +68,9 @@ svg {
 header {
   width: 100%;
   height: 100vh;
-  background-image: url(../images/wide-home.gif);
+  background-image: url(../images/back-small.svg);
   background-size: cover;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   @include flexbox;
@@ -74,6 +78,7 @@ header {
   @include justify-content(center);
   @media screen and (min-width: 650px) {
     @include align-items(center);
+    background-image: url(../images/wide-home.gif);
   }
   .info-box {
     @extend %flexbox;
@@ -155,16 +160,17 @@ nav {
   @include flex-direction(column);
   padding: 10% 5% 2% 5%;
   @media screen and (min-width: 1000px) {
-    padding: 5% 5% 0% 5%;
+    @include flex-direction(row);
+    padding: 1% 5% 0% 5%;
   }
   article {
     max-width: 800px;
     margin-top: 15px;
     @extend %flexbox;
-    @include flex-direction(row);
-    @include flex-wrap(wrap);
+    @include flex-direction(column);
+    // @include flex-wrap(wrap);
     @media screen and (min-width: 1000px) {
-      // @include flex(50%);
+      @include flex(50%);
       // margin-top: 0;
     }
     h2 {
@@ -180,25 +186,13 @@ nav {
         @include flex(60%);
       }
     }
-    img {
-      border-radius: 50%;
-      max-width: 150px;
-      margin-left: 50%;
-      @media screen and (min-width: 650px) {
-        margin-left: 70%;
-      }
-      @media screen and (min-width: 1000px) {
-        @include flex(35%);
-        margin-left: 0;
-        max-width: 250px;
-      }
-    }
   }
   svg {
     max-width: 650px;
     padding: $standart-padding;
     @media screen and (min-width: 1000px) {
       padding: 2% 5% 0 5%;
+      @include flex(40%);
     }
   }
 }
@@ -231,16 +225,16 @@ nav {
   opacity: 1 !important;
 }
 
-.bMask {@include skill-animation(1s, lineral, 50% 100%, rightAnimation); visibility: visible !important;}
-.htmlMask {@include skill-animation(1.25s, lineral,50% 100%, rightAnimation); visibility: visible !important;}
-.wpMask {@include skill-animation(1.5s, lineral,50% 100%, rightAnimation); visibility: visible !important;}
-.jqMask {@include skill-animation(1.75s, lineral,0 50%, rightAnimation);visibility: visible !important;}
-.gitMask {@include skill-animation(2s, lineral, 50% 0, rightAnimation); visibility: visible !important;}
-.jsMask {@include skill-animation(2.25s, lineral, 50% 0, rightAnimation); visibility: visible !important;}
-.cssMask {@include skill-animation(2.5s, lineral, 50% 0, rightAnimation); visibility: visible !important;}
-.rMask {@include skill-animation(2.75s, lineral, 50% 0, rightAnimation); visibility: visible !important;}
-.sassMask {@include skill-animation(3s, lineral, 100% 50%, rightAnimation); visibility: visible !important;}
-.ilMask {@include skill-animation(3.25s, lineral,100% 50%, rightAnimation); visibility: visible !important;}
+#bMask {@include skill-animation; visibility: visible !important;}
+#htmlMask {@include skill-animation; visibility: visible !important;}
+#wpMask {@include skill-animation; visibility: visible !important;}
+#jqMask {@include skill-animation;visibility: visible !important;}
+#gitMask {@include skill-animation; visibility: visible !important;}
+#jsMask {@include skill-animation; visibility: visible !important;}
+#cssMask {@include skill-animation; visibility: visible !important;}
+#rMask {@include skill-animation; visibility: visible !important;}
+#sassMask {@include skill-animation; visibility: visible !important;}
+#ilMask {@include skill-animation; visibility: visible !important;}
 
 /*===========PORTFOLIO===================*/
 #projects {
@@ -252,11 +246,14 @@ nav {
 .panels {
   @extend %flexbox;
   @include flex-direction(column);
-  height: 800px;
+  height: 900px;
   width: 100%;
   @media screen and (min-width: 900px) {
     @include flex-direction(row);
-    height: 500px;
+    height: 600px;
+  }
+  @media screen and (min-width: 1150px) {
+    height: 520px;
   }
 }
 
@@ -355,8 +352,18 @@ nav {
 .panel.openActive > *:first-child { padding-top: 20px }
 .panel > *:nth-child(2) { opacity: 0; }
 .panel.openActive > *:nth-child(2) { @extend %fadeIn; opacity: 1;}
-.panel > *:last-child { transform: translateX(100%); }
-.panel.openActive > *:last-child { transform: translateX(0); }
+.panel > *:last-child {
+  @include transform(translateX(110%));
+  @media screen and (min-width: 900px) {
+    @include transform (translateY(110%));
+  }
+}
+.panel.openActive > *:last-child {
+  @include transform(translateX(0));
+  @media screen and (min-width: 900px) {
+    @include transform (translateY(0));
+  }
+}
 
 /*===========CONTACT & FOOTER====================*/
 #contact {
@@ -426,21 +433,36 @@ footer {
 
 /*===========ANIMATIONS==================*/
 @keyframes rightAnimation {
-  0% { transform: rotate(180deg); }
-  50% { transform: rotate(180deg); }
-  100% { transform: rotate(360deg); }
+	0% {
+		transform: scale(0);
+		opacity: 0.0;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
 }
 
 @-webkit-keyframes rightAnimation {
-	0% {-webkit-transform: rotate(180deg);}
-	50% {-webkit-transform: rotate(180deg);}
-	100% {-webkit-transform: rotate(180deg);}
+	0% {
+		-webkit-transform: scale(0);
+		opacity: 0.0;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
 }
 
 @-moz-keyframes rightAnimation {
-  0% { -moz-transform: rotate(180deg); }
-  50% { -moz-transform: rotate(180deg); }
-  100% { -moz-transform: rotate(360deg); }
+	0% {
+		-moz-transform: scale(0);
+		opacity: 0.0;
+	}
+	100% {
+		-moz-transform: scale(1);
+		opacity: 1;
+	}
 }
 
 /*reference: Made by Justin Aguilar www.justinaguilar.com/animations/ */
