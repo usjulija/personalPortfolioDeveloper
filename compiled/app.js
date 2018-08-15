@@ -59,6 +59,39 @@ skills.forEach(function (skill) {
   });
 });
 
+//animation on skills chart
+function checkSlide() {
+  var svg = document.getElementById('objects');
+  var skillPathes = document.querySelectorAll('.skillPath');
+
+  //halfway through the whole svg with skills
+  var slideInAt = window.scrollY + window.innerHeight - svg.clientHeight / 2;
+  //bottom of svg
+  var imageBottom = svg.offsetTop + svg.clientHeight;
+
+  var isHalfShown = slideInAt > svg.offsetTop;
+  var isNotScrolledPast = window.scrollY < imageBottom;
+  console.log(slideInAt, imageBottom, isHalfShown, isNotScrolledPast);
+
+  if (isHalfShown && isNotScrolledPast) {
+    skillPathes.forEach(function (skill) {
+      return skill.classList.add('active');
+    });
+  } else {
+    skillPathes.forEach(function (skill) {
+      return skill.classList.remove('active');
+    });
+  }
+}
+
+//on scroll effects
+window.addEventListener('scroll', debounce(checkSlide));
+
+function checkSlideOnClick() {
+  console.log("check");
+  setTimeout(checkSlide, 1000);
+}
+
 //portfolio part
 var panels = document.querySelectorAll('.panel');
 
@@ -85,8 +118,25 @@ panels.forEach(function (panel) {
   });
 });
 
-//on scroll effects
-window.onscroll = function () {
-  stickyNavbar();
-  reset();
+//function that makes onscroll fire just every 20 millisecond
+function debounce(func) {
+  var wait = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 20;
+  var immediate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+  var timeout;
+  return function () {
+    var context = this,
+        args = arguments;
+    var later = function later() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
 };
+
+window.addEventListener('scroll', debounce(reset));
+window.addEventListener('scroll', stickyNavbar);
