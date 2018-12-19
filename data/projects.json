@@ -1,0 +1,73 @@
+[
+  {
+    "id": 0,
+    "image": "./images/0.png",
+    "name": "Jungle Game",
+    "date": "April, 2018",
+    "code": "https://github.com/usjulija/JungleMemoryGame",
+    "demo": "https://usjulija.github.io/JungleMemoryGame/",
+    "resources": "Udacity project",
+    "starterRepository": "from scratch",
+    "description": "The game is designed to test memory - the user has to find matching pairs of cards. The game is developed from scratch using HTML, CSS, and JavaScript (ES6 syntax). The page is designed in jungle style and is fully responsive."
+  }, {
+    "id": 1,
+    "image": "./images/1.png",
+    "name": "Cosmic Jumper",
+    "date": "May, 2018",
+    "code": "https://github.com/usjulija/CosmicJumper",
+    "demo": "https://usjulija.github.io/CosmicJumper/",
+    "resources": "Udacity project",
+    "starterRepository": "https://github.com/udacity/frontend-nanodegree-arcade-game",
+    "description": "The game is inspired by \"frogger\" - the player should cross the space avoiding asteroids and a toxic area in order to reach the other edge of the canvas. The game is available only for the desktop. The game was created using Object Oriented JavaScript and HTML canvas."
+  }, {
+    "id": 2,
+    "image": "./images/2.png",
+    "name": "Restaurant App",
+    "date": "July, 2018",
+    "code": "https://github.com/usjulija/restaurantApp",
+    "demo": "https://usjulija.github.io/restaurantApp/",
+    "resources": "Udacity project",
+    "starterRepository": "https://github.com/udacity/mws-restaurant-stage-1",
+    "description": "Mobile-ready web application displays restaurants of Klaipeda region, Lithuania. The responsive design implemented using CSS media queries. The application is accessible for screen reader users. The page is cached using service worker, therefore the app is available offline."
+  }, {
+    "id": 3,
+    "image": "./images/3.png",
+    "name": "Owl Reads",
+    "date": "July, 2018",
+    "code": "https://github.com/usjulija/myOwlReads",
+    "demo": "https://myowlreads.herokuapp.com/",
+    "resources": "Udacity project",
+    "starterRepository": "https://github.com/udacity/reactnd-project-myreads-starter",
+    "description": "The bookshelf app that allows you to select and categorize books you have read, are currently reading, or want to read. The search-page and book-shelf-changing functionality are implemented using ReactJS."
+  }, {
+    "id": 4,
+    "image": "./images/4.png",
+    "name": "National Parks",
+    "date": "July, 2018",
+    "code": "https://github.com/usjulija/NationalParks",
+    "demo": "https://nationalparkseurope.herokuapp.com/",
+    "resources": "Udacity project",
+    "starterRepository": "from scratch",
+    "description": "Single page web app displays top twenty European National Parks. The application is developed using ReactJS, the map is included using Google Maps API, additional information about the parks is added using Wikipedia API. The app is accessible for screen reader users."
+  }, {
+    "id": 5,
+    "image": "./images/5.png",
+    "name": "Java Script",
+    "date": "September, 2018",
+    "code": "https://github.com/usjulija/JS30daysChallenge",
+    "demo": "https://usjulija.github.io/JS30daysChallenge/",
+    "resources": "Wes Bos course",
+    "starterRepository": "https://github.com/wesbos/JavaScript30",
+    "description": "30 small projects, developed in 30 days, using HTML, CSS, and JavaScript."
+  }, {
+    "id": 6,
+    "image": "./images/6.png",
+    "name": "Weather App",
+    "date": "July, 2018",
+    "code": "https://github.com/usjulija/PWAweaterApp",
+    "demo": "https://usjulija.github.io/PWAweaterApp/",
+    "resources": "Google codelab",
+    "starterRepository": "from scratch",
+    "description": "Progressive Web Application, displaying 5-days weather forecast based on current location or selected city. It is possible to choose temperature units: Fahrenheit or Celsius. The user is able to add multiple cities to the app. The app is designed using JavaScript ES6 syntax, SCSS, and SVG animation."
+  }
+]

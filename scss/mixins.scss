@@ -18,6 +18,13 @@
 	@include transform(scale($scale));
 }
 
+@mixin perspective($value: preserve-3d) {
+  -webkit-transform-style: $value;
+  -moz-transform-style: $value;
+  -o-transform-style: $value;
+  transform-style: $value;
+}
+
 @mixin flexbox {
   display: -webkit-box;
   display: -moz-box;
@@ -95,22 +102,16 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$color1}, endColorstr=#{$color4})
 }
 
+@mixin background-grad($color1: #000000, $color2: #261423) {
+  background: $color1;
+  background: -moz-linear-gradient(top, $color1 0%, $color2 100%);
+  background: -webkit-linear-gradient(top, $color1 0%,$color2 100%);
+  background: linear-gradient(to bottom, $color1 0%,$color2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=0 );
+}
+
 @mixin box-shadow( $horiz : 0 , $vert : 10px , $blur : 19px , $spread : -2px , $color : rgba(0,0,0,0.28) ){
   -webkit-box-shadow: $horiz $vert $blur $spread $color;
   -moz-box-shadow: $horiz $vert $blur $spread $color;
   box-shadow: $horiz $vert $blur $spread $color;
-}
-
-@mixin skill-animation ($time: 1.5s, $direction: ease-in-out, $origin: 50%, $name: rightAnimation) {
-  animation-duration: $time;
-  -webkit-animation-duration: $time;
-
-  animation-timing-function: $direction;
-  -webkit-animation-timing-function: $direction;
-
-  transform-origin: $origin;
-  -webkit-transform-origin: $origin;
-
-  animation-name: $name;
-  -webkit-animation-name: $name;
 }

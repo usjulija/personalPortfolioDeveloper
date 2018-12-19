@@ -4,53 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" href="https://image.ibb.co/gomGeT/logo.png" type="image/png" sizes="16x16">
-  <!--build:css css/styles.min.css-->
   <link href="css/styles.css" rel="stylesheet">
-  <!--endbuild-->
+    <link rel="icon" href="https://image.ibb.co/gomGeT/logo.png" type="image/png" sizes="16x16">
   <title>Portfolio</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 </head>
 <body>
-  <header id="welcome-section">
-    <div class="info-box">
-      <h2>Julia Us</h2>
-      <h1>Front End Web Developer</h1>
-      <div id="profile-link">
+  <header>
+    <div id="viewport">
+      <div id="world">
+      </div>
+    </div>
+    <div id="welcome-section">
+      <div class="info-box">
+        <h2>Julia Us</h2>
+        <h1>front-end web developer</h1>
+        <div>
+          <a tabindex="-1"
+            class="button"
+            href="https://www.linkedin.com/in/julijaus/"
+            rel="noopener noreferrer"
+            target="_blank">
+            <svg class="svg-link" role="button" aria-label="link to my linedin" xmlns="http://www.w3.org/2000/svg" tabindex="0" width="45" height="45" version="1" viewBox="0 0 486 486">
+              <path fill="#261423" d="M243 0a243 243 0 1 0 0 486 243 243 0 0 0 0-486zm-61 361h-60V148h60v213zm-28-226a28 28 0 1 1 0-57 28 28 0 0 1 0 57zm241 226h-61V229c0-15-4-26-23-26-31 0-37 26-37 26v132h-61V148h61v21c8-7 30-21 60-21 20 0 61 12 61 83v130z"/>
+            </svg>
+          </a>
+          <a tabindex="-1"
+            class="button"
+            href="https://codepen.io/Julli/"
+            rel="noopener noreferrer"
+            target="_blank">
+            <svg class="svg-link" role="button" aria-label="link to my codepen" tabindex="0" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 32 32">
+              <path fill="#261423" d="M17 0h-3L1 9l-1 2v10l2 2 12 8h3l13-8 1-2V11l-1-2-13-9zm10 11l-5 3-5-3V4l10 7zM14 4v6l-5 4-4-3 9-7zM3 14l3 2-3 2v-4zm11 13l-9-6 4-3 5 3v6zm-2-11l3-2 4 2-3 2-4-2zm5 11v-6l5-3 5 3-10 6zm11-9l-3-2 3-2v4z"/>
+            </svg>
+          </a>
+          <a tabindex="-1"
+            class="button"
+            href="https://github.com/usjulija"
+            rel="noopener noreferrer"
+            target="_blank">
+            <svg class="svg-link" role="button" aria-label="link to my github" tabindex="0" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 512 512">
+              <path fill="#261423" d="M256 5a257 257 0 0 0-81 501c13 3 18-5 18-12l-1-44c-71 16-86-34-86-34-12-30-28-38-28-38-24-16 1-16 1-16 26 2 39 27 39 27 23 39 60 28 75 21 2-16 9-28 16-34-57-7-116-29-116-127 0-28 10-51 26-69-3-7-11-33 3-68 0 0 21-7 70 26a244 244 0 0 1 128 0c49-33 70-26 70-26 14 35 6 61 3 68 16 18 26 41 26 69 0 99-60 120-117 127 10 8 18 23 18 47v71c0 7 4 15 17 12A257 257 0 0 0 256 5z"/>
+            </svg>
+          </a>
+        </div>
         <a tabindex="-1"
           class="button"
-          href="https://www.linkedin.com/in/julijaus/"
-          rel="noopener noreferrer"
-          target="_blank">
-          <svg role="button" aria-label="link to my linedin" xmlns="http://www.w3.org/2000/svg" tabindex="0" width="45" height="45" version="1" viewBox="0 0 486 486">
-            <path fill="#280004" d="M243 0a243 243 0 1 0 0 486 243 243 0 0 0 0-486zm-61 361h-60V148h60v213zm-28-226a28 28 0 1 1 0-57 28 28 0 0 1 0 57zm241 226h-61V229c0-15-4-26-23-26-31 0-37 26-37 26v132h-61V148h61v21c8-7 30-21 60-21 20 0 61 12 61 83v130z"/>
-          </svg>
-        </a>
-        <a tabindex="-1"
-          class="button"
-          href="https://codepen.io/Julli/"
-          rel="noopener noreferrer"
-          target="_blank">
-          <svg role="button" aria-label="link to my codepen" tabindex="0" xmlns="http://www.w3.org/2000/svg" width="45" height="45" version="1" viewBox="0 0 32 32">
-            <path fill="#280004" d="M17 0h-3L1 9l-1 2v10l2 2 12 8h3l13-8 1-2V11l-1-2-13-9zm10 11l-5 3-5-3V4l10 7zM14 4v6l-5 4-4-3 9-7zM3 14l3 2-3 2v-4zm11 13l-9-6 4-3 5 3v6zm-2-11l3-2 4 2-3 2-4-2zm5 11v-6l5-3 5 3-10 6zm11-9l-3-2 3-2v4z"/>
-          </svg>
-        </a>
-        <a tabindex="-1"
-          class="button"
-          href="https://github.com/usjulija"
-          rel="noopener noreferrer"
-          target="_blank">
-          <svg role="button" aria-label="link to my github" tabindex="0" xmlns="http://www.w3.org/2000/svg" width="45" height="45" version="1" viewBox="0 0 512 512">
-            <path fill="#280004" d="M256 5a257 257 0 0 0-81 501c13 3 18-5 18-12l-1-44c-71 16-86-34-86-34-12-30-28-38-28-38-24-16 1-16 1-16 26 2 39 27 39 27 23 39 60 28 75 21 2-16 9-28 16-34-57-7-116-29-116-127 0-28 10-51 26-69-3-7-11-33 3-68 0 0 21-7 70 26a244 244 0 0 1 128 0c49-33 70-26 70-26 14 35 6 61 3 68 16 18 26 41 26 69 0 99-60 120-117 127 10 8 18 23 18 47v71c0 7 4 15 17 12A257 257 0 0 0 256 5z" class="active-path"/>
+          href="#about">
+          <svg class="svg-link" role="button" aria-label="link to about me section" xmlns="http://www.w3.org/2000/svg" tabindex="0" width="35" height="35" viewBox="0 0 129 129">
+            <path fill="#261423" d="M121 35c-1-2-4-2-6 0L66 86 13 35a4 4 0 0 0-5 5l54 54 2 1c1 1 3 0 3-1l54-54c2-1 2-4 0-5z"/>
           </svg>
         </a>
       </div>
-      <a tabindex="-1"
-        class="button"
-        href="#about">
-        <svg role="button" aria-label="link to about me section" xmlns="http://www.w3.org/2000/svg" tabindex="0" width="35" height="35" version="1" viewBox="0 0 129 129">
-          <path fill="#280004" d="M121 35c-1-2-4-2-6 0L66 86 13 35a4 4 0 0 0-5 5l54 54 2 1c1 1 3 0 3-1l54-54c2-1 2-4 0-5z"/>
-        </svg>
-      </a>
     </div>
   </header>
   <nav id="navbar">
@@ -58,17 +63,16 @@
       tabindex="-1"
       class="navButton">
       <svg role="button" aria-label="link to home" tabindex="0" width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.4 58.4">
-        <path fill="#CE6C47" d="M57.9 26.6l-8.7-8V5.4h-10v3.9L29.2 0 .5 26.6a1 1 0 0 0 1.4 1.5l3.3-3v33.3h48V25l3.3 3.1a1 1 0 0 0 1.4 0c.4-.5.4-1 0-1.5zM41.2 7.4h6v9.3l-6-5.6V7.4zm-18 49V35.3c0-.5.4-1 1-1h10c.6 0 1 .5 1 1v21h-12zm28 0h-14V35.3a3 3 0 0 0-3-3h-10a3 3 0 0 0-3 3v21h-14V23.3l22-20.5L43.5 16l5.7 5.3 2 1.9v33.2z"/>
+        <path fill="#5f8ab6" d="M57.9 26.6l-8.7-8V5.4h-10v3.9L29.2 0 .5 26.6a1 1 0 0 0 1.4 1.5l3.3-3v33.3h48V25l3.3 3.1a1 1 0 0 0 1.4 0c.4-.5.4-1 0-1.5zM41.2 7.4h6v9.3l-6-5.6V7.4zm-18 49V35.3c0-.5.4-1 1-1h10c.6 0 1 .5 1 1v21h-12zm28 0h-14V35.3a3 3 0 0 0-3-3h-10a3 3 0 0 0-3 3v21h-14V23.3l22-20.5L43.5 16l5.7 5.3 2 1.9v33.2z"/>
       </svg>
       <p>home</p>
     </a>
     <a href="#about"
       tabindex="-1"
       class="navButton"
-      onclick="checkSlideOnClick()"
       >
       <svg role="button" aria-label="link to about me section" tabindex="0" width="47" height="47" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 55">
-        <path fill="#CE6C47" d="M55 27.5A27.5 27.5 0 1 0 9 47.8h-.1l.9.7.2.2a27.6 27.6 0 0 0 3.6 2.5l.3.2 2 1c2.1 1 4.4 1.7 6.7 2.2h.2l2.2.3h.3a27.2 27.2 0 0 0 4.4 0h.3l2.2-.3h.2c2.3-.5 4.5-1.1 6.5-2l.3-.2a27.6 27.6 0 0 0 3.8-2.2l.5-.4 1.3-1 .3-.2 1-.7H46c5.5-5.1 9-12.4 9-20.4zm-53 0a25.5 25.5 0 1 1 42.4 19l-.9-.5-8.4-4.2a2.2 2.2 0 0 1-1.3-2v-3l.6-.8c1.1-1.5 2-3.2 2.7-5.1 1.2-.6 2-1.9 2-3.3v-3.5c0-.9-.3-1.7-.9-2.4V17a8 8 0 0 0-1.8-5.8C34.5 9 31.5 8 27.5 8s-7 1-8.9 3.2a8 8 0 0 0-1.9 5.8v4.7c-.5.7-.8 1.5-.8 2.4v3.5c0 1.1.5 2.1 1.3 2.8.8 3.2 2.5 5.6 3.1 6.4v3c0 .7-.4 1.5-1.2 1.9L11.2 46l-.7.5a25.4 25.4 0 0 1-8.5-19zm40.5 20.6l-1.1.8c-.2 0-.3.2-.5.3l-1.4.8-.4.2c-1.1.6-2.3 1-3.5 1.5l-2 .6-2 .4-1.9.2h-.3a24.8 24.8 0 0 1-3.8 0h-.3l-2-.2-3.9-1h-.1l-1.9-.8a26 26 0 0 1-1.7-.8l-.2-.1a25.7 25.7 0 0 1-3.3-2.1l-.1-.1 8-4.4a4.2 4.2 0 0 0 2.2-3.7v-3.6l-.2-.3s-2.2-2.6-3-6.2l-.1-.4-.4-.2c-.4-.3-.7-.8-.7-1.4v-3.5c0-.5.2-1 .5-1.3l.3-.3v-5.7a6 6 0 0 1 1.4-4.3c1.5-1.7 4-2.5 7.4-2.5 3.4 0 5.9.8 7.3 2.5 1.7 1.9 1.5 4.3 1.5 4.3v5.7l.3.3c.3.4.5.8.5 1.3v3.5c0 .7-.4 1.4-1.1 1.6l-.5.1-.2.5a18.5 18.5 0 0 1-3.2 6l-.3.3v3.7c0 1.6 1 3 2.4 3.8l8.4 4.2.2.1-.3.2z"/>
+        <path fill="#5f8ab6" d="M55 27.5A27.5 27.5 0 1 0 9 47.8h-.1l.9.7.2.2a27.6 27.6 0 0 0 3.6 2.5l.3.2 2 1c2.1 1 4.4 1.7 6.7 2.2h.2l2.2.3h.3a27.2 27.2 0 0 0 4.4 0h.3l2.2-.3h.2c2.3-.5 4.5-1.1 6.5-2l.3-.2a27.6 27.6 0 0 0 3.8-2.2l.5-.4 1.3-1 .3-.2 1-.7H46c5.5-5.1 9-12.4 9-20.4zm-53 0a25.5 25.5 0 1 1 42.4 19l-.9-.5-8.4-4.2a2.2 2.2 0 0 1-1.3-2v-3l.6-.8c1.1-1.5 2-3.2 2.7-5.1 1.2-.6 2-1.9 2-3.3v-3.5c0-.9-.3-1.7-.9-2.4V17a8 8 0 0 0-1.8-5.8C34.5 9 31.5 8 27.5 8s-7 1-8.9 3.2a8 8 0 0 0-1.9 5.8v4.7c-.5.7-.8 1.5-.8 2.4v3.5c0 1.1.5 2.1 1.3 2.8.8 3.2 2.5 5.6 3.1 6.4v3c0 .7-.4 1.5-1.2 1.9L11.2 46l-.7.5a25.4 25.4 0 0 1-8.5-19zm40.5 20.6l-1.1.8c-.2 0-.3.2-.5.3l-1.4.8-.4.2c-1.1.6-2.3 1-3.5 1.5l-2 .6-2 .4-1.9.2h-.3a24.8 24.8 0 0 1-3.8 0h-.3l-2-.2-3.9-1h-.1l-1.9-.8a26 26 0 0 1-1.7-.8l-.2-.1a25.7 25.7 0 0 1-3.3-2.1l-.1-.1 8-4.4a4.2 4.2 0 0 0 2.2-3.7v-3.6l-.2-.3s-2.2-2.6-3-6.2l-.1-.4-.4-.2c-.4-.3-.7-.8-.7-1.4v-3.5c0-.5.2-1 .5-1.3l.3-.3v-5.7a6 6 0 0 1 1.4-4.3c1.5-1.7 4-2.5 7.4-2.5 3.4 0 5.9.8 7.3 2.5 1.7 1.9 1.5 4.3 1.5 4.3v5.7l.3.3c.3.4.5.8.5 1.3v3.5c0 .7-.4 1.4-1.1 1.6l-.5.1-.2.5a18.5 18.5 0 0 1-3.2 6l-.3.3v3.7c0 1.6 1 3 2.4 3.8l8.4 4.2.2.1-.3.2z"/>
       </svg>
       <p>about</p>
     </a>
@@ -77,7 +81,7 @@
       tabindex="-1"
       class="navButton">
       <svg role="button" aria-label="link to the portfolio" tabindex="0" width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-        <path fill="#CE6C47" d="M485.5 251.7h-58.8V98.1A42.7 42.7 0 0 0 384 55.5H128A42.7 42.7 0 0 0 85.3 98v51.2H38.5A38.6 38.6 0 0 0 0 188V418a38.6 38.6 0 0 0 38.5 38.5h136.3A38.5 38.5 0 0 0 211 431h147.5c4.7 0 8.5-3.8 8.5-8.5v-17a25.6 25.6 0 0 0-25.6-25.7h-25.6v-34.1H384v84.5a26.5 26.5 0 0 0 26.5 26.4h75a26.5 26.5 0 0 0 26.5-26.4V278a26.5 26.5 0 0 0-26.5-26.4zM196.3 418c0 11.9-9.6 21.5-21.5 21.5H38.5A21.5 21.5 0 0 1 17.1 418V414h179.2v4.1zm0-21.2H17V209.1h179.2v187.7zm0-204.8H17v-4.1c0-11.9 9.6-21.5 21.4-21.5h136.3c11.9 0 21.5 9.6 21.5 21.5v4.1zm145 204.8c4.7 0 8.6 3.8 8.6 8.5v8.6H213.3v-17.1h128zm-128-17v-34.2h85.4v34.1h-85.4zM384 328.4H213.3V303H384v25.6zm0-50.3v7.7H213.3v-98a38.6 38.6 0 0 0-38.5-38.6h-72.4V98.1A25.6 25.6 0 0 1 128 72.5h256a25.6 25.6 0 0 1 25.6 25.6v153.7a26.5 26.5 0 0 0-25.6 26.4zM495 430c0 5.2-4.3 9.4-9.5 9.4h-75a9.4 9.4 0 0 1-9.4-9.4v-7.7h93.8v7.7zm0-24.8h-94V303h94v102.4zm0-119.4h-94v-7.7c0-5.2 4.3-9.4 9.5-9.4h75c5.2 0 9.4 4.2 9.4 9.4v7.7z"/>
+        <path fill="#5f8ab6" d="M485.5 251.7h-58.8V98.1A42.7 42.7 0 0 0 384 55.5H128A42.7 42.7 0 0 0 85.3 98v51.2H38.5A38.6 38.6 0 0 0 0 188V418a38.6 38.6 0 0 0 38.5 38.5h136.3A38.5 38.5 0 0 0 211 431h147.5c4.7 0 8.5-3.8 8.5-8.5v-17a25.6 25.6 0 0 0-25.6-25.7h-25.6v-34.1H384v84.5a26.5 26.5 0 0 0 26.5 26.4h75a26.5 26.5 0 0 0 26.5-26.4V278a26.5 26.5 0 0 0-26.5-26.4zM196.3 418c0 11.9-9.6 21.5-21.5 21.5H38.5A21.5 21.5 0 0 1 17.1 418V414h179.2v4.1zm0-21.2H17V209.1h179.2v187.7zm0-204.8H17v-4.1c0-11.9 9.6-21.5 21.4-21.5h136.3c11.9 0 21.5 9.6 21.5 21.5v4.1zm145 204.8c4.7 0 8.6 3.8 8.6 8.5v8.6H213.3v-17.1h128zm-128-17v-34.2h85.4v34.1h-85.4zM384 328.4H213.3V303H384v25.6zm0-50.3v7.7H213.3v-98a38.6 38.6 0 0 0-38.5-38.6h-72.4V98.1A25.6 25.6 0 0 1 128 72.5h256a25.6 25.6 0 0 1 25.6 25.6v153.7a26.5 26.5 0 0 0-25.6 26.4zM495 430c0 5.2-4.3 9.4-9.5 9.4h-75a9.4 9.4 0 0 1-9.4-9.4v-7.7h93.8v7.7zm0-24.8h-94V303h94v102.4zm0-119.4h-94v-7.7c0-5.2 4.3-9.4 9.5-9.4h75c5.2 0 9.4 4.2 9.4 9.4v7.7z"/>
       </svg>
       <p>portfolio</p>
     </a>
@@ -85,7 +89,7 @@
       tabindex="-1"
       class="navButton">
       <svg role="button" aria-label="link to the contact section" tabindex="0" width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55.3 55.3">
-        <path fill="#CE6C47" d="M52.6 2.6a9 9 0 0 0-12.7 0l-36 36-.1.1v.1l-.2.3-3.6 15v.1a1 1 0 0 0 .1.5l.2.3a1 1 0 0 0 1 .2L16 51.7a1 1 0 0 0 .4-.2l36.1-36.1a9 9 0 0 0 0-12.8zM51.2 4a7 7 0 0 1 .7 9.2L42 3.4a7 7 0 0 1 9.1.6zm-5 14.9L36.5 9l1.4-1.4 9.9 9.9-1.4 1.4zM5 50.3a1 1 0 0 0-1.5 0l-.7.7 2.5-10.7 4.5-.5-.6 5.1v.4a1 1 0 0 0 .3.4 1 1 0 0 0 .5.3H10.4l5.1-.5-.5 4.4-10.7 2.6.8-.8c.4-.4.4-1 0-1.4zm12.5-5.5L40 22.4a1 1 0 1 0-1.4-1.4L16 43.4l-4.8.5.6-4.7 22.3-22.4a1 1 0 1 0-1.4-1.4L10.4 37.7l-3.1.4 27.6-27.7 10 10L17.1 48l.3-3.2zm31.6-28.7L39 6l1.5-1.3 9.9 9.9-1.4 1.4z"/>
+        <path fill="#5f8ab6" d="M52.6 2.6a9 9 0 0 0-12.7 0l-36 36-.1.1v.1l-.2.3-3.6 15v.1a1 1 0 0 0 .1.5l.2.3a1 1 0 0 0 1 .2L16 51.7a1 1 0 0 0 .4-.2l36.1-36.1a9 9 0 0 0 0-12.8zM51.2 4a7 7 0 0 1 .7 9.2L42 3.4a7 7 0 0 1 9.1.6zm-5 14.9L36.5 9l1.4-1.4 9.9 9.9-1.4 1.4zM5 50.3a1 1 0 0 0-1.5 0l-.7.7 2.5-10.7 4.5-.5-.6 5.1v.4a1 1 0 0 0 .3.4 1 1 0 0 0 .5.3H10.4l5.1-.5-.5 4.4-10.7 2.6.8-.8c.4-.4.4-1 0-1.4zm12.5-5.5L40 22.4a1 1 0 1 0-1.4-1.4L16 43.4l-4.8.5.6-4.7 22.3-22.4a1 1 0 1 0-1.4-1.4L10.4 37.7l-3.1.4 27.6-27.7 10 10L17.1 48l.3-3.2zm31.6-28.7L39 6l1.5-1.3 9.9 9.9-1.4 1.4z"/>
       </svg>
       <p>contact</p>
     </a>
@@ -95,254 +99,21 @@
       <article>
         <h2>About me</h2>
         <div>
-          <p>Hi! My name is Julia and I'm the front-end-web-developer.
-            I have strong background in International Business and Web-Development is the next step in my career.
-            I'm in love with visual arts and technologies.
-            I specialize in responsive & mobile-first design. My aim is to integrate creative elegance into every project, along with intuitive user interface.
+          <p>
+            I am a front-end web developer, passionate about user-friendly design. For me web development is like creating a painting, just instead of paint, I would use HTML, CSS, and JavaScript. I seek elegant solutions for both my designs and my code.
           </p>
-          <p>I have achieved Udacity This Front End Developer Nanodegree and I have skills to build responsive, dynamic user interfaces on the web. I have strong knowledge of HTML, CSS, and JavaScript therefore, I can manage all client-side scripting.</p>
+          <p>
+            As a Google Developer Nanodegree Scholarship recipient at Udacity, I acquired knowledge on many contemporary Web Development subjects, including HTML5, CSS3, JavaScript ES6 syntax, object-oriented JavaScript, ReactJS, Progressive Web Applications, Accessibility and much more.
+          </p>
+          <p>
+            I have a strong International Business background and believe that my previous experience and new skills result in effective combination. I have more than 4 years of working experience in international companies with a focus on customer service and effective business collaboration. I am enthusiastic about technologies and willing to share my time, knowledge, and a good mood with the others.
+          </p>
         </div>
       </article>
-      <div id="objects">
-        <svg tabindex="-1" aria-label="list of skills" role="presentation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 913.5 879">
-          <g class="skill">
-            <path clip-path="url(#skillMask_wp)" fill="#00749A" d="M600.5 347c14 21.6 22.1 47.4 22.1 75.1 0 2.7-.1 5.4-.2 8.1l55.1 54.9 70.2-24.5c1.8-12.6 2.8-25.5 2.8-38.6 0-44.8-11.1-87-30.6-124.1L677.5 359l-77-12z"/>
-            <clipPath id="skillMask_wp">
-              <path style="visibility:hidden" id="wpMask" class="skillPath" d="M600.5 347c14 21.6 22.1 47.4 22.1 75.1 0 2.7-.1 5.4-.2 8.1l55.1 54.9 70.2-24.5c1.8-12.6 2.8-25.5 2.8-38.6 0-44.8-11.1-87-30.6-124.1L677.5 359l-77-12z"/>
-            </clipPath>
-            <g class="tooltip">
-              <circle cx="816.1" cy="366.5" r="51" fill="#00749A"/>
-              <text transform="translate(629.8822 410)" fill="#FFF" font-family="'Comfortaa'" font-size="18" letter-spacing="2">
-                WordPress
-              </text>
-              <path fill="#FFF" d="M816.1 324.7c-23.1 0-41.9 18.8-41.9 41.9 0 23.1 18.8 41.9 41.9 41.9 23.1 0 41.9-18.8 41.9-41.9 0-23.2-18.8-41.9-41.9-41.9zm0 3.6c21.1 0 38.2 17.1 38.2 38.2s-17.1 38.2-38.2 38.2-38.2-17.1-38.2-38.2 17.1-38.2 38.2-38.2zm0 3.6c-19.1 0-34.6 15.5-34.6 34.6s15.5 34.6 34.6 34.6 34.6-15.5 34.6-34.6-15.5-34.6-34.6-34.6zm0 3.7c7.2 0 13.9 2.5 19.1 6.6-.9 1.1-1.5 2.6-1.5 4.1 0 2.9 1.6 5.5 3.5 8.4 1.4 2.4 2.9 5.5 2.9 9.8 0 3.1-.9 6.9-2.7 11.7l-3.6 12-12.9-38.6c2.2-.2 4.2-.4 4.2-.4 1.8-.2 1.6-2.9-.2-2.9h-.2s-5.8.5-9.6.5c-3.5 0-9.5-.5-9.5-.5h-.2c-1.8 0-2 2.9-.2 2.9 0 0 1.8.2 3.8.4l5.6 15.3-7.8 23.5-13.1-38.9c2.2-.2 4.2-.4 4.2-.4 1.8-.2 1.6-2.9-.2-2.9h-.2s-2.4.2-5 .4c5.7-6.8 14.1-11 23.6-11zm22 9.1c2.5 2.5 4.5 5.4 6 8.7 0 2.1-.4 4.1-.9 6.2-.7-2.5-1.6-4.7-2.7-6.5l-.4-.7c-1.5-2.4-2.5-4.2-2.5-5.8 0-.7.1-1.3.5-1.9zm-24.6 5.6h1.8c.7.2 1.3.2 2.2.2l.2.4 12.9 38.6 1.3 3.6-2.1 1.2-9.7-25.9-1.3-3.5-.4-1.3-4.9-13.3zm-23.9.2h.8l.2.4 13.1 38.9 1.1 3.3-.6 2c-.5-.2-1-.5-1.5-.7l-14.8-40.6c.5-1.2 1.1-2.3 1.7-3.3zm56.7 9.3c.5 2.2.8 4.4.8 6.7 0 9.6-4.3 18.1-11.1 23.8l8.6-24.9c.7-2 1.3-3.9 1.7-5.6zm-60.5.3l11.3 30.8c-7.3-5.7-12-14.5-12-24.4.1-2.2.3-4.3.7-6.4zm30.3 9.3l9.7 26.4c-3.1 1-6.3 1.6-9.7 1.6-3.2 0-6.2-.5-9.1-1.4l9.1-26.6zm0 0"/>
-            </g>
-          </g>
-          <g class="skill">
-            <path clip-path="url(#skillMask_git)" fill="#F05033" d="M583.7 525.7c-18.3 22.3-43.5 38.7-72.2 46.2l-35.4 69.7 44.7 58.9c56.8-9.5 107.6-37 146.2-76.4l-71-21.4-12.3-77z"/>
-            <clipPath id="skillMask_git">
-              <path style="visibility:hidden" id="gitMask" class="skillPath" d="M583.7 525.7c-18.3 22.3-43.5 38.7-72.2 46.2l-35.4 69.7 44.7 58.9c56.8-9.5 107.6-37 146.2-76.4l-71-21.4-12.3-77z"/>
-            </clipPath>
-            <g class="tooltip">
-              <ellipse cx="623.4" cy="740.8" fill="#F05033" rx="51" ry="51" transform="rotate(-17.955 623.4180652 740.87787078)"/>
-              <text fill="#FFF" font-family="'Comfortaa'" font-size="24" transform="translate(538.5541 637.8173)">
-                Git
-              </text>
-              <defs>
-                <path d="M579.9 697.5h86.4v86.4h-86.4z"/>
-              </defs>
-              <clipPath>
-                <use overflow="visible" xlink:href="#SVGID_1_"/>
-              </clipPath>
-              <path fill="#FFF" d="M623.1 701.3c1.1 0 2.1.4 2.8 1.2l35.5 35.5c1.6 1.5 1.6 4.1 0 5.6L625.9 779c-.7.8-1.7 1.2-2.8 1.2s-2.1-.4-2.8-1.2l-35.5-35.5c-1.6-1.5-1.6-4.1 0-5.6l23.1-23.1 4.3 4.3c-1 3.8 0 8 2.9 10.9.7.7 1.5 1.3 2.3 1.8v18.1c-3.4 2-5.6 5.6-5.6 9.7 0 6.2 5.1 11.3 11.3 11.3 6.2 0 11.3-5.1 11.3-11.3 0-4.1-2.2-7.8-5.6-9.7v-14.2l2.3 2.3c-1 3.8 0 8 2.9 10.9 2.1 2.1 5 3.3 8 3.3s5.8-1.2 8-3.3c4.4-4.4 4.4-11.5 0-15.9-2.1-2.1-4.9-3.3-7.9-3.3-1 0-2 .1-2.9.4l-5-5c1-3.8 0-8-2.9-10.9-2.1-2.1-4.9-3.3-7.9-3.3-1 0-2 .1-2.9.4l-4.3-4.3 4.4-4.4c.4-.9 1.4-1.3 2.5-1.3m0-3.7c-2 0-4 .8-5.5 2.3l-7 7 8.7 8.7c1.2-.7 2.5-1 3.8-1 1.9 0 3.8.7 5.3 2.2 2.5 2.5 2.8 6.2 1.1 9.1l8.5 8.5c1.2-.7 2.5-1 3.8-1 1.9 0 3.8.7 5.3 2.2 2.9 2.9 2.9 7.7 0 10.6-1.5 1.5-3.4 2.2-5.3 2.2s-3.8-.7-5.3-2.2c-2.5-2.5-2.8-6.2-1.1-9.1l-8.5-8.5c-.6.4-1.3.6-1.9.8v23.1c3.2.8 5.6 3.7 5.6 7.2 0 4.2-3.4 7.5-7.5 7.5s-7.5-3.4-7.5-7.5c0-3.5 2.4-6.4 5.6-7.2v-23.1c-1.3-.3-2.4-.9-3.4-1.9-2.5-2.5-2.8-6.2-1.1-9.1l-8.7-8.7-25.8 25.8c-3 3-3 7.9 0 10.9l35.5 35.5c1.5 1.5 3.5 2.3 5.5 2.3s4-.8 5.5-2.3l35.5-35.5c3-3 3-7.9 0-10.9L628.7 700c-1.6-1.7-3.6-2.4-5.6-2.4zm0 0" clip-path="url(#SVGID_2_)"/>
-            </g>
-          </g>
-          <g class="skill">
-            <path clip-path="url(#skillMask_sass)" fill="#CD669A" d="M316.9 409.8c1.6-30.2 12.8-57.8 30.7-79.9l-12.5-77.8-70.4-21.2c-38.4 39.3-64.7 90.4-73.1 147.4l69.3-24.2 56 55.7z"/>
-            <clipPath id="skillMask_sass">
-              <path style="visibility:hidden" id="sassMask" class="skillPath" d="M316.9 409.8c1.6-30.2 12.8-57.8 30.7-79.9l-12.5-77.8-70.4-21.2c-38.4 39.3-64.7 90.4-73.1 147.4l69.3-24.2 56 55.7z"/>
-            </clipPath>
-            <g class="tooltip">
-              <ellipse cx="160.3" cy="256" fill="#CD669A" rx="51" ry="51" transform="rotate(-53.954 160.31482801 255.9719356)"/>
-              <text fill="#FFF" font-family="'Comfortaa'" font-size="24" transform="translate(248.0288 320.3264)">
-                Sass
-              </text>
-              <path fill="#FFF" d="M194.7 256.8c-3 0-5.6.7-7.7 1.8-.8-1.6-1.6-3-1.7-4-.2-1.2-.3-1.9-.1-3.4.2-1.4 1-3.5 1-3.6 0-.2-.2-.9-1.9-.9s-3.2.3-3.4.8c-.2.5-.5 1.5-.7 2.5-.3 1.6-3.4 7.1-5.2 10-.6-1.1-1.1-2.1-1.2-2.9-.2-1.2-.3-1.9-.1-3.4.2-1.4 1-3.5 1-3.6 0-.2-.2-.9-1.9-.9s-3.2.3-3.4.8c-.2.5-.4 1.5-.7 2.5-.4 1-4.5 10.3-5.6 12.7-.6 1.2-1 2.2-1.4 2.9s0 0-.1.1c-.3.6-.5.9-.5.9-.2.4-.5.8-.6.8-.1 0-.3-1.1 0-2.7.6-3.2 2.1-8.2 2.1-8.4 0-.1.3-1-1-1.4-1.2-.4-1.6.3-1.8.3-.1 0-.2.3-.2.3s1.4-5.6-2.6-5.6c-2.5 0-5.9 2.7-7.5 5.1-1.1.6-3.3 1.8-5.7 3.1-.9.5-1.9 1-2.8 1.5l-.2-.2c-4.8-5.1-13.6-8.7-13.2-15.5.1-2.5 1-9 16.9-17 13.1-6.5 23.5-4.7 25.3-.7 2.6 5.7-5.6 16.2-19.1 17.7-5.2.6-7.9-1.4-8.6-2.2-.7-.8-.8-.8-1.1-.7-.4.2-.2.9 0 1.3.4 1.1 2.1 2.9 4.9 3.9 2.5.8 8.6 1.3 15.9-1.6 8.2-3.2 14.6-12 12.7-19.4-1.9-7.5-14.4-10-26.2-5.8-7 2.5-14.6 6.4-20.1 11.5-6.5 6.1-7.5 11.4-7.1 13.6 1.5 7.9 12.3 13 16.7 16.8l-.6.3c-2.2 1.1-10.4 5.4-12.5 10-2.3 5.2.4 8.9 2.2 9.4 5.6 1.5 11.3-1.2 14.3-5.8 3.1-4.6 2.7-10.5 1.3-13.3 0 0 0-.1-.1-.1.6-.3 1.1-.7 1.7-1 1.1-.6 2.2-1.3 3.1-1.8-.5 1.4-.9 3.2-1.1 5.7-.2 2.9 1 6.7 2.5 8.2.7.7 1.5.7 2.1.7 1.8 0 2.7-1.5 3.6-3.3 1.1-2.2 2.1-4.8 2.1-4.8s-1.3 7 2.2 7c1.2 0 2.5-1.6 3.1-2.4s0-.1.1-.2c.1-.2.2-.3.2-.3.5-.9 1.6-2.9 3.3-6.1 2.2-4.2 4.2-9.5 4.2-9.5s.2 1.3.8 3.4c.4 1.3 1.2 2.7 1.8 4-.5.7-.8 1.1-.8 1.1-.4.5-.8 1.1-1.3 1.7-1.7 2-3.7 4.3-4 5-.3.8-.2 1.4.4 1.8.5.3 1.3.4 2.1.3 1.5-.1 2.6-.5 3.1-.7.8-.3 1.8-.8 2.7-1.4 1.7-1.2 2.7-3 2.6-5.3-.1-1.3-.5-2.6-1-3.8.2-.2.3-.4.5-.7 2.6-3.8 4.7-8.1 4.7-8.1s.2 1.3.8 3.4c.3 1.1.9 2.3 1.5 3.4-2.5 2-4 4.3-4.5 5.9-1 2.8-.2 4.1 1.2 4.4.7.1 1.6-.2 2.3-.5.9-.3 1.9-.8 2.9-1.5 1.7-1.2 3.3-2.9 3.2-5.3 0-1.1-.3-2.1-.7-3.1 2.1-.9 4.8-1.4 8.3-1 7.4.9 8.9 5.5 8.6 7.4-.3 1.9-1.8 3-2.4 3.3-.5.3-.7.4-.6.7.1.3.3.3.7.3.6-.1 3.9-1.6 4-5.2.4-4.2-4-9.2-11.7-9.2zm-57.2 19.3c-2.5 2.7-5.9 3.7-7.4 2.8-1.6-.9-1-4.9 2.1-7.7 1.8-1.7 4.2-3.3 5.8-4.3.4-.2.9-.5 1.5-.9.1-.1.2-.1.2-.1.1-.1.3-.1.4-.2 1 4 0 7.6-2.6 10.4zm17.9-12.2c-.9 2.1-2.6 7.4-3.7 7.1-.9-.2-1.5-4.3-.2-8.3.7-2 2.1-4.4 2.9-5.3 1.3-1.5 2.8-2 3.2-1.4.4.8-1.7 6.6-2.2 7.9zm14.8 7.1c-.4.2-.7.3-.9.2-.1-.1.1-.3.1-.3s1.9-2 2.6-2.9c.4-.5.9-1.2 1.5-1.9v.2c0 2.5-2.3 4.1-3.3 4.7zm11.4-2.6c-.3-.2-.2-.8.7-2.8.3-.8 1.1-2 2.5-3.3.2.5.3 1 .3 1.4-.1 3.1-2.2 4.2-3.5 4.7z"/>
-            </g>
-          </g>
-          <g class="skill">
-            <path clip-path="url(#skillMask_il)" fill="#F38027" d="M354.3 324c18.2-22.5 43.2-39.1 71.9-46.8l35.5-70-44.6-58.8c-56.6 9.6-107.2 37.1-145.6 76.5l70.4 21.2 12.4 77.9z"/>
-            <clipPath id="skillMask_il">
-              <path style="visibility:hidden" id="ilMask" class="skillPath" d="M354.3 324c18.2-22.5 43.2-39.1 71.9-46.8l35.5-70-44.6-58.8c-56.6 9.6-107.2 37.1-145.6 76.5l70.4 21.2 12.4 77.9z"/>
-            </clipPath>
-            <g class="tooltip">
-              <ellipse cx="315.4" cy="111" fill="#F38027" rx="51" ry="51" transform="rotate(-17.955 315.36055493 111.00084017)"/>
-              <text transform="translate(353.3978 211.466)">
-                <tspan x="0" y="0" fill="#FFF" font-family="'Comfortaa'" font-size="20">Adobe</tspan><tspan x="-16.5" y="26.4" fill="#FFF" font-family="'Comfortaa'" font-size="20">Illustrator</tspan>
-              </text>
-              <path fill="#FFF" d="M290.1 83.1c-1.5 0-2.7 1.2-2.7 2.7v50.6c0 1.5 1.2 2.7 2.7 2.7h50.6c1.5 0 2.7-1.2 2.7-2.7V85.7c0-1.5-1.2-2.7-2.7-2.7h-50.6zm0 2.6h50.6v50.6h-50.6V85.7zm18.6 10.7l-6.6 29.3h3.2l1.9-8.6h6.4l1.8 8.6h3.2l-6.4-29.3h-3.5zm17 0c-1.1 0-2 .8-2 2.1 0 1.2.8 2.1 1.9 2.1 1.2 0 2-.8 2-2.1.1-1.3-.7-2.1-1.9-2.1zm-15.3 3.2h.1c.3 2.1.7 4.5 1.2 6.6l1.5 7.5h-5.4l1.5-7.5c.3-1.9.7-4.4 1.1-6.6zM324 103v22.6h3.3V103H324zm0 0"/>
-            </g>
-          </g>
-          <g class="skill">
-            <path clip-path="url(#skillMask_b)" fill="#563D7C" d="M436.2 275.5c11.5-3.1 23.5-4.7 35.9-4.7 17.6 0 34.4 3.3 49.9 9.3l69.5-35.6-1.6-74.1C554.4 152.8 514.3 143 472 143c-15.4 0-30.4 1.3-45.1 3.8l44.6 58.8-35.3 69.9z"/>
-            <clipPath id="skillMask_b">
-              <path style="visibility:hidden" id="bMask" class="skillPath" d="M436.2 275.5c11.5-3.1 23.5-4.7 35.9-4.7 17.6 0 34.4 3.3 49.9 9.3l69.5-35.6-1.6-74.1C554.4 152.8 514.3 143 472 143c-15.4 0-30.4 1.3-45.1 3.8l44.6 58.8-35.3 69.9z"/>
-            </clipPath>
-            <g class="tooltip">
-              <ellipse cx="530.4" cy="77.8" fill="#563D7C" rx="51" ry="51" transform="rotate(-71.953 530.41553383 77.80963552)"/>
-              <text transform="translate(477.932 225.3866)" fill="#FFF" font-family="'Comfortaa'" font-size="20">
-                Bootstrap
-              </text>
-              <path fill="#FFF" d="M513.3 51.4h22.6c4.2 0 7.5 1 10 2.9s3.8 4.8 3.8 8.7c0 2.3-.6 4.4-1.7 6-1.1 1.7-2.8 3-4.9 3.9v.1c2.9.6 5 2 6.5 4.1 1.5 2.1 2.2 4.7 2.2 7.9 0 1.8-.3 3.5-1 5.1-.7 1.6-1.7 3-3.1 4.1-1.4 1.1-3.2 2.1-5.3 2.7-2.2.7-4.8 1-7.8 1h-21.4V51.4h.1zm8.2 19.5h13.3c2 0 3.6-.5 4.9-1.7 1.3-1.1 2-2.7 2-4.8 0-2.3-.6-4-1.8-5-1.2-1-2.9-1.4-5.1-1.4h-13.3v12.9zm0 20.4h14.4c2.5 0 4.4-.6 5.8-1.9 1.4-1.3 2.1-3.1 2.1-5.5 0-2.3-.7-4.1-2.1-5.3s-3.3-1.9-5.8-1.9h-14.4v14.6z"/>
-            </g>
-          </g>
-          <g class="skill">
-            <path clip-path="url(#skillMask_css)" fill="#0170BA" d="M408.2 565c-27.3-10.7-50.4-29.7-66.1-54l-77.9-12.2-41.9 60.4c26 49.7 67.3 90.2 117.6 115.3l-1.6-73.7 69.9-35.8z"/>
-            <clipPath id="skillMask_css">
-              <path style="visibility:hidden" id="cssMask" class="skillPath" d="M408.2 565c-27.3-10.7-50.4-29.7-66.1-54l-77.9-12.2-41.9 60.4c26 49.7 67.3 90.2 117.6 115.3l-1.6-73.7 69.9-35.8z"/>
-            </clipPath>
-            <g class="tooltip">
-              <ellipse cx="780.5" cy="586.8" fill="#0170BA" rx="51" ry="51" transform="rotate(-53.956 585.43357947 1188.78451807)"/>
-              <text fill="#FFF" font-family="'Comfortaa'" font-size="24" transform="translate(280.4167 579.8185)">
-                CSS
-              </text>
-              <path fill="#FFF" fill-rule="evenodd" d="M237.6 707.1l-24.9 7.1-24.9-7.1-5.3-60.4h60.4c-1.7 20.2-3.5 40.3-5.3 60.4zm1.5-56.8h-52.6l4.8 54.1 21.5 6.2 21.5-6.2 4.8-54.1zm-40.9 35.5h7.1l.2 4.4 7.3 2.5 7.3-2.5.5-8H205l-.4-7.1h16.3l.5-7.1H197l-.5-7.1H229l-.9 14.2-1.2 20.4-14 4.6-14-4.6-.7-9.7zm0 0" clip-rule="evenodd"/>
-            </g>
-          </g>
-          <g class="skill">
-            <path clip-path="url(#skillMask_jq)" fill="#0868AB" d="M676.9 494.7l-55.1-54.9c-1.7 30.3-13.2 58-31.3 80l12.3 76.9 71 21.4c38.6-39.4 65-90.7 73.3-147.9l-70.2 24.5z"/>
-            <clipPath id="skillMask_jq">
-              <path style="visibility:hidden" id="jqMask" class="skillPath" d="M676.9 494.7l-55.1-54.9c-1.7 30.3-13.2 58-31.3 80l12.3 76.9 71 21.4c38.6-39.4 65-90.7 73.3-147.9l-70.2 24.5z"/>
-            </clipPath>
-            <g class="tooltip">
-              <text fill="#FFF" font-family="'Comfortaa'" font-size="24" transform="translate(618.1713 550.051)">
-                jQuery
-              </text>
-              <ellipse cx="780.5" cy="586.8" fill="#0868AB" rx="51" ry="51" transform="rotate(-53.956 780.43357947 586.78451807)"/>
-              <defs>
-                <path d="M753.3 559.6h54.4V614h-54.4z"/>
-              </defs>
-              <clipPath>
-                <use overflow="visible" xlink:href="#SVGID_3_"/>
-              </clipPath>
-              <path fill="#FFF" d="M786.5 559.7c-.1 0-.3.1-.4.1-1.1.5-2.3 2.1-2.5 2.4v.1c-1.2 1.8-1.8 3.9-1.9 6 0 1.6.3 3.2.9 4.8 1.5 3.6 4.6 6.6 8.3 8 .1 0 .2.1.5.2l.2.1h.1c.2.1.4.1.6.2 1 .2 1.9.3 2.8.3h.5c6.8 0 9.4-4.8 10.3-6.4.1-.2.1-.3.2-.4.4-.6.2-1.3-.3-1.7-.6-.4-1.3-.2-1.7.3-1.8 2.7-4.9 3.5-9.2 2.4-.3-.1-.7-.2-1-.3-.4-.1-.8-.3-1.2-.5-.7-.4-1.5-.8-2.1-1.3-3.8-2.9-5.2-9-3-12.5.3-.5.2-1.1-.1-1.5-.2-.2-.6-.4-1-.3zm-11 2.4c-.3 0-.6.1-.8.3-1.9 1.5-3.8 4-3.9 4.1v.1c-3.4 4.9-3.6 11.9-.6 17.8.5.9 1 1.8 1.6 2.6l.2.2c.5.7 1 1.5 1.7 2.1.2.3.5.5.7.8l.1.1.1.1c.3.2.5.5.8.7l.1.1c.3.3.6.5 1 .8l.1.1c.3.3.6.5 1 .7 0 0 .1 0 .1.1.1.1.2.1.3.2l.1.1.1.1c.2.2.5.3.8.5.2.1.5.3.6.3.1 0 .1.1.3.2l.4.2s.1 0 .1.1c.2.1.5.2.8.4l.4.2c.3.1.5.2.8.3l.1.1.1.1c.2.1.5.2.7.2l.5.2.9.3c1.7.3 3.3.4 4.9.4h.5c13.6-.3 17.2-11.9 17.2-12 .2-.6-.1-1.2-.7-1.5-.5-.3-1.2-.1-1.5.4-3.5 5-10 7.2-16.6 5.4-.3-.1-.6-.2-1-.3-.1 0-.1 0-.2-.1-.2-.1-.4-.1-.7-.2l-.3-.1-.6-.3-.2-.1c-.3-.1-.6-.3-.8-.4l-.7-.4c-.2-.1-.3-.2-.5-.3l-.1-.1-.1-.1c-.2-.1-.4-.2-.5-.3l-.1-.1-.1-.1c-.1-.1-.3-.2-.4-.3-.3-.2-.6-.4-.9-.7l-.1-.1c-3.2-2.5-5.5-5.9-6.6-9.6-1-3.3-.3-7.7 2-11.7.3-.5.2-1.2-.3-1.6-.2.1-.5 0-.8 0zm-13.5 3.7c-.3 0-.6.1-.8.3-2.4 2.1-4.1 4.9-4.3 5.2-5 7.3-4.1 18.8-.6 25.7.1.1.1.3.2.4v.1c.1.1.1.3.2.3 0 .1.1.2.1.2.1.1.1.2.2.4l.4.7c.1.1.1.2.1.2.1.1.2.3.2.4l.2.3c.1.1.1.2.2.2l.6.9.1.1c.2.3.4.5.5.7l.7.9.1.1.1.1c.2.3.4.5.7.8l.1.1c.2.2.4.5.7.7l.2.2.6.6.1.1.2.2c.2.2.5.4.7.6l.2.2c.2.2.5.4.7.6l1.2.9c.2.1.4.3.6.5.1.1.2.1.2.2l.1.1.9.6c.3.2.6.4 1 .6l.2.1c.2.1.5.3.7.4.1.1.3.1.4.2l.6.3.2.1c.3.1.6.3.9.4l.1.1c.3.1.6.3 1.1.4.1 0 .1.1.1.1l.9.3.2.1c.3.1.7.2 1.1.4h.2l.2.1.9.3c2.3.4 4.5.6 6.7.6 17.7 0 23.3-14.2 23.4-14.4.2-.6 0-1.2-.6-1.5-.5-.3-1.2-.2-1.6.3-4.5 6-13.1 8.2-22.9 5.9-.2-.1-.5-.1-.7-.2l-.5-.1-.9-.3-.1-.1c-.3-.1-.5-.2-.8-.3l-.3-.1c-.3-.1-.6-.2-.9-.4l-.2-.1c-.3-.1-.5-.2-.8-.4l-.2-.1c-.2-.1-.3-.2-.6-.3l-1-.5c-.1-.1-.2-.1-.3-.2l-.9-.6c-.1 0-.1-.1-.3-.2-.2-.1-.4-.3-.7-.5v.2c-.2-.1-.4-.3-.6-.4-.1-.1-.2-.2-.4-.3-.2-.1-.3-.2-.5-.4l-.3-.2c-.2-.2-.4-.4-.7-.6 0 0-.1 0-.1-.1-.2-.2-.5-.5-.8-.7l-.9-.9-.7-.7c-.2-.2-.4-.5-.7-.8l-.5-.6c-.1-.1-.1-.2-.2-.3-.2-.2-.4-.5-.5-.7-4.8-6.6-6.1-20.4-2.3-25.5.4-.5.3-1.2-.2-1.6 0-.3-.3-.4-.6-.4zm0 0" clip-path="url(#SVGID_4_)"/>
-            </g>
-          </g>
-          <g class="skill">
-            <path clip-path="url(#skillMask_js)" fill="#E5B900" d="M501.5 573.6c-11.2 2.9-22.9 4.4-35 4.4-17.8 0-34.8-3.4-50.4-9.5l-69.9 35.8 1.6 73.7c35.8 17.8 76.1 27.9 118.8 27.9 15.1 0 29.9-1.3 44.3-3.7l-44.7-58.9 35.3-69.7z"/>
-            <clipPath id="skillMask_js">
-              <path style="visibility:hidden" id="jsMask" class="skillPath" d="M501.5 573.6c-11.2 2.9-22.9 4.4-35 4.4-17.8 0-34.8-3.4-50.4-9.5l-69.9 35.8 1.6 73.7c35.8 17.8 76.1 27.9 118.8 27.9 15.1 0 29.9-1.3 44.3-3.7l-44.7-58.9 35.3-69.7z"/>
-            </clipPath>
-            <g class="tooltip">
-              <ellipse cx="780.5" cy="586.8" fill="#E5B900" rx="51" ry="51" transform="rotate(-53.956 780.43357947 1047.78451807)"/>
-              <text transform="translate(383.4778 631.4042)">
-                <tspan x="0" y="0" fill="#FFF" font-family="'Comfortaa'" font-size="24">Java</tspan>
-                <tspan x="-4.9" y="28.8" fill="#FFF" font-family="'Comfortaa'" font-size="24">Script</tspan>
-              </text>
-              <path fill="#FFF" d="M381.7 745.4c-2.1 0-3.9 1.8-3.9 3.9v53.3c0 2.1 1.8 3.9 3.9 3.9H435c2.1 0 3.9-1.7 3.9-3.9v-53.3c0-2.1-1.7-3.9-3.9-3.9h-53.3zm0 2.9H435c.5 0 1 .4 1 1v53.3c0 .5-.4 1-1 1h-53.3c-.5 0-1-.4-1-1v-53.3c0-.5.5-1 1-1zm23.8 24.8v18.3c0 2.8-1.1 3.5-2.9 3.5-1.9 0-3.3-1.2-4.2-2.8l-4.6 2.8c1.3 2.8 4.6 5.8 9.1 5.8 5 0 8.4-2.6 8.4-8.5V773h-5.8zm18.1 0c-5 0-8.1 3.2-8.1 7.3 0 4.5 2.7 6.7 6.7 8.4l1.4.6c2.5 1.1 3.8 1.8 3.8 3.7 0 1.6-1.2 2.7-3.5 2.7-2.7 0-4-1.9-5.2-3.8l-4.4 2.9c1.6 3.2 4.6 5.8 9.7 5.8 5.3 0 9.2-2.7 9.2-7.7 0-4.6-2.7-6.7-7.4-8.7l-1.4-.6c-2.4-1-3.4-1.7-3.4-3.4 0-1.3 1-2.4 2.7-2.4 1.6 0 2.6.7 3.6 2.4l4.3-2.8c-2-3.2-4.5-4.4-8-4.4zm0 0"/>
-            </g>
-          </g>
-          <g class="skill">
-            <path clip-path="url(#skillMask_r)" fill="#05A5D1" d="M338.4 501.9c-14-21.7-22.2-47.5-22.2-75.2 0-2.5.1-4.9.2-7.3l-55.9-55.7-69.3 24.2c-1.9 12.7-2.8 25.7-2.8 38.9 0 44.5 10.9 86.5 30.2 123.4l41.9-60.4 77.9 12.1z"/>
-            <clipPath id="skillMask_r">
-              <path style="visibility:hidden" id="rMask" class="skillPath" d="M338.4 501.9c-14-21.7-22.2-47.5-22.2-75.2 0-2.5.1-4.9.2-7.3l-55.9-55.7-69.3 24.2c-1.9 12.7-2.8 25.7-2.8 38.9 0 44.5 10.9 86.5 30.2 123.4l41.9-60.4 77.9 12.1z"/>
-            </clipPath>
-            <g class="tooltip">
-              <ellipse cx="780.5" cy="586.8" fill="#05A5D1" rx="51" ry="51" transform="rotate(-53.956 365.43357947 1188.78451807)"/>
-              <path fill="#FFF" fill-rule="evenodd" d="M140 461.4c-1.4 0-2.8.2-4.3.7-2.9.9-6 2.8-9.1 5.3-1.2 1-2.5 2.1-3.7 3.3-1.2-1.2-2.4-2.3-3.6-3.3-3.1-2.5-6.2-4.4-9.1-5.3-2.9-.9-5.8-1-8.2.4-2.4 1.4-3.8 3.9-4.4 6.9-.6 3-.6 6.5.1 10.5.2 1.4.5 2.8.9 4.3-1.4.4-2.7.8-3.9 1.3-3.7 1.4-6.7 3.2-8.9 5.2-2.2 2.1-3.7 4.5-3.7 7.3 0 2.7 1.4 5.2 3.7 7.3 2.2 2 5.3 3.8 8.9 5.2 1.3.5 2.7 1 4.2 1.4-.5 2-1 3.9-1.2 5.7-.6 4-.7 7.5-.1 10.5s2.1 5.5 4.4 6.9c2.4 1.4 5.3 1.3 8.2.4 2.9-.9 6-2.8 9.1-5.3 1.2-1 2.4-2.1 3.7-3.3 1.2 1.2 2.5 2.3 3.7 3.3 3.1 2.6 6.2 4.4 9.1 5.3 2.9.9 5.8 1 8.2-.4 2.4-1.4 3.8-3.9 4.4-6.9.6-3 .6-6.5-.1-10.5-.3-1.8-.7-3.7-1.2-5.7 1.5-.5 3-.9 4.3-1.4 3.7-1.4 6.7-3.2 8.9-5.2s3.7-4.5 3.7-7.3c0-2.7-1.4-5.2-3.7-7.3-2.2-2-5.3-3.8-8.9-5.2-1.2-.5-2.6-.9-4-1.3.4-1.5.7-3 .9-4.3.6-4 .7-7.5.1-10.5s-2.1-5.5-4.4-6.9c-1.3-.7-2.6-1-4-1.1zm-.2 3.6c.9 0 1.6.2 2.3.6 1.3.7 2.2 2.2 2.7 4.5s.5 5.5-.1 9.2c-.2 1.3-.5 2.6-.8 4-3.6-.9-7.6-1.5-11.9-1.9-2.1-3-4.3-5.6-6.5-8 1.2-1.1 2.3-2.2 3.5-3.1 2.9-2.4 5.6-4 7.9-4.7 1.1-.4 2.1-.6 2.9-.6zm-33.7 0c.9 0 1.9.1 3 .5 2.3.7 5 2.3 7.9 4.7 1.1.9 2.3 1.9 3.4 3.1-2.2 2.4-4.4 5.1-6.6 8.1-4.2.4-8.2 1-11.8 1.9-.3-1.4-.6-2.7-.8-3.9-.6-3.7-.6-6.9-.1-9.2.5-2.4 1.4-3.8 2.7-4.5.7-.4 1.4-.6 2.3-.7zm16.9 10.9c1.5 1.6 2.9 3.3 4.3 5.2-1.4-.1-2.8-.1-4.3-.1s-2.9 0-4.4.1c1.5-1.9 2.9-3.6 4.4-5.2zm0 8.7c2.4 0 4.8.1 7.1.3 1.6 2.3 3.1 4.7 4.6 7.2 1.3 2.2 2.5 4.5 3.5 6.7-1.1 2.2-2.3 4.5-3.6 6.8-1.2 2-2.4 3.9-3.6 5.7-2.6.2-5.3.3-8 .3-2.8 0-5.6-.1-8.2-.4-1.2-1.8-2.4-3.7-3.5-5.6-1.3-2.3-2.5-4.5-3.6-6.8 1.1-2.2 2.3-4.5 3.6-6.8 1.5-2.5 3-4.9 4.6-7.2 2.3-.1 4.7-.2 7.1-.2zm11.6.7c2.9.4 5.7.9 8.3 1.5-.8 2.5-1.7 5.1-2.8 7.8-.7-1.4-1.5-2.8-2.3-4.3-1.1-1.7-2.1-3.4-3.2-5zm-23.4 0c-1 1.6-2 3.2-3 4.9-.8 1.4-1.6 2.9-2.4 4.3-1.1-2.7-2.1-5.3-2.8-7.7 2.5-.6 5.2-1.1 8.2-1.5zm35.2 2.4c1.3.4 2.5.8 3.6 1.2 3.4 1.3 6.1 2.9 7.8 4.5 1.7 1.6 2.5 3.1 2.5 4.6 0 1.5-.8 3-2.5 4.6-1.7 1.6-4.4 3.2-7.8 4.5-1.2.5-2.6.9-4 1.3-1-3.1-2.3-6.4-3.8-9.7 1.7-3.7 3.1-7.4 4.2-11zm-46.9 0c1.1 3.5 2.5 7.2 4.2 11-1.5 3.4-2.8 6.6-3.9 9.8-1.4-.4-2.7-.8-3.9-1.3-3.4-1.3-6.1-2.9-7.8-4.5-1.7-1.6-2.5-3.1-2.5-4.6 0-1.5.8-3 2.5-4.6 1.7-1.6 4.4-3.2 7.8-4.5 1.2-.5 2.4-.9 3.6-1.3zm23.5 2.2c-4.9 0-8.9 4-8.9 8.9s4 8.9 8.9 8.9 8.9-4 8.9-8.9-4-8.9-8.9-8.9zM105.8 503c.7 1.4 1.5 2.9 2.4 4.3.7 1.1 1.3 2.2 2 3.3-2.4-.3-4.7-.8-6.8-1.2.7-2 1.5-4.2 2.4-6.4zm34.3 0c.9 2.2 1.8 4.4 2.4 6.4-2.1.5-4.4.9-6.8 1.2.7-1.1 1.4-2.2 2-3.4.9-1.3 1.7-2.8 2.4-4.2zm-37.7 9.9c3.2.8 6.7 1.4 10.4 1.7 2.5 3.6 5 6.8 7.6 9.6-1.2 1.1-2.3 2.2-3.4 3.1-2.9 2.4-5.6 3.9-7.9 4.7-2.3.7-4 .6-5.3-.1-1.3-.7-2.2-2.2-2.7-4.5s-.5-5.5.1-9.2c.3-1.7.7-3.5 1.2-5.3zm41.2 0c.5 1.9.9 3.7 1.2 5.3.6 3.7.6 6.9.1 9.2-.5 2.4-1.4 3.8-2.7 4.5-1.3.7-3 .8-5.3.1-2.3-.7-5-2.3-7.9-4.7-1.1-.9-2.3-2-3.4-3.1 2.6-2.8 5.2-6 7.7-9.6 3.5-.3 7-.9 10.3-1.7zm-26.2 2.1c1.8.1 3.7.2 5.6.2 1.8 0 3.6-.1 5.4-.2-1.8 2.4-3.6 4.7-5.5 6.6-1.8-1.9-3.7-4.2-5.5-6.6zm0 0" clip-rule="evenodd"/>
-              <text transform="translate(211.7581 456.8376)" fill="#FFF" font-family="'Comfortaa'" font-size="22" letter-spacing="1">
-                ReactJS
-              </text>
-            </g>
-          </g>
-          <g class="skill">
-            <path clip-path="url(#skillMask_html)" fill="#E44D26" d="M530.1 283.6c27.6 10.6 50.9 29.8 66.7 54.4l76.9 12.1 42.4-61.1c-26.2-49.7-67.6-90.1-118.1-115.1l1.6 74.1-69.5 35.6z"/>
-            <clipPath id="skillMask_html">
-              <path style="visibility:hidden" id="htmlMask" class="skillPath" d="M530.1 283.6c27.6 10.6 50.9 29.8 66.7 54.4l76.9 12.1 42.4-61.1c-26.2-49.7-67.6-90.1-118.1-115.1l1.6 74.1-69.5 35.6z"/>
-            </clipPath>
-            <g class="tooltip">
-              <ellipse cx="721.4" cy="174.4" fill="#E44D26" rx="51" ry="51" transform="matrix(.8095 -.5872 .5872 .8095 35.0491 456.787)"/>
-              <text fill="#FFF" font-family="'Comfortaa'" font-size="24" transform="translate(604.2513 298.0042)">
-                HTML
-              </text>
-              <path fill="#FFF" d="M692.4 144.1l5.3 59.2 23.7 6.6 23.7-6.6 5.3-59.1h-58zm48.2 55.4l-19.1 5.3h-.1l-19.1-5.3-4.5-50.5h47.3l-4.5 50.5zm-10.3-21.3l-.8 9.4-8.1 2.2-8.1-2.2-.5-5.8h-7.3l1 11.4 14.9 4.1 14.8-4.1 2-22.3h-26.4l-.7-7.4h27.8l.6-7.3h-36.3l2 21.9h25.1zm0 0"/>
-            </g>
-          </g>
-          <text fill="#563D7C" font-family="'Comfortaa'" font-size="71" transform="translate(340 448.2646)">
-            SKILLS
-          </text>
-        </svg>
-      </div>
     </section>
-    <section id="projects" aria-label="list of recent projects" role="presentation">
-      <h2>Recent Projects</h2>
-      <div class="panels">
-        <div class="panel panel1">
-          <h3>cosmic jumper</h3>
-          <img src="images/cosmic-jumper.png" alt="game preview">
-          <article>
-            <p>A player should cross the space avoiding asteroids and green-toxic area in order to reach the station on the other edge of the canvas. Player and the Enemy classes are implemented using Object-Oriented JavaScript.</p>
-            <a  class="portfolioButton"
-                tabindex="-1"
-                href="https://usjulija.github.io/CosmicJumper/"
-                rel="noopener noreferrer"
-                target="_blank"
-                role="button">DEMO</a>
-            <a  tabindex="-1"
-                href="https://github.com/usjulija/CosmicJumper"
-                rel="noopener noreferrer"
-                target="_blank"
-                role="button">CODE</a>
-          </article>
-        </div>
-        <div class="panel panel2">
-          <h3>owl reads</h3>
-          <img src="images/owl-reads.png" alt="game preview">
-          <article>
-            <p>The bookshelf app that allows you to select and categorize books you have read, are currently reading, or want to read. The search-page and book-shelf-changing functionality are implemented using ReactJS.</p>
-            <a  tabindex="-1"
-                href="https://myowlreads.herokuapp.com/"
-                rel="noopener noreferrer"
-                target="_blank"
-                role="button">DEMO</a>
-            <a  tabindex="-1"
-                href="https://github.com/usjulija/myOwlReads"
-                rel="noopener noreferrer"
-                target="_blank"
-                role="button">CODE</a>
-          </article>
-        </div>
-        <div class="panel panel3">
-          <h3>national parks</h3>
-          <img src="images/national-parks.png" alt="game preview">
-          <article>
-            <p>Mobile-ready web application listing 20 European National Parks, including map markers and search function. The application is developed from scratch using ReactJS, map is included using Google Maps API, additional information about the parks is added using Wikipedia API. The application is accessible for screen reader use.</p>
-            <a  tabindex="-1"
-                href="https://nationalparkseurope.herokuapp.com/"
-                rel="noopener noreferrer"
-                target="_blank"
-                role="button">DEMO</a>
-            <a  tabindex="-1"
-                href="https://github.com/usjulija/NationalParks"
-                rel="noopener noreferrer"
-                target="_blank"
-                role="button">CODE</a>
-          </article>
-        </div>
-        <div class="panel panel1">
-          <h3>restaurant app</h3>
-          <img src="images/restaurants.png" alt="game preview">
-          <article>
-            <p>Mobile-ready web application listing restaurants of Klaipeda region, Lithuania. Responsive design implemented using CSS media queries. The application is accessible for screen reader use. Using ServiceWorker, the website is cashed so that any page that has been visited is accessible offline.</p>
-            <a  tabindex="-1"
-                href="https://usjulija.github.io/restaurantApp/"
-                rel="noopener noreferrer"
-                target="_blank"
-                role="button">DEMO</a>
-            <a  tabindex="-1"
-                href="https://github.com/usjulija/restaurantApp"
-                rel="noopener noreferrer"
-                target="_blank"
-                role="button">CODE</a>
-          </article>
-        </div>
-        <div class="panel panel2">
-          <h3>jungle game</h3>
-          <img src="images/jungle.png" alt="game preview">
-          <article>
-            <p>Memory game, where the user has to find matching pairs of cards. The game is developed from scratch using HTML, CSS and JavaScript (ES6 syntax) and is responsive on different sized displays. The page is designed in jungle style, with design elements added in SVG format.</p>
-            <a  tabindex="-1"
-                href="https://usjulija.github.io/JungleMemoryGame/"
-                rel="noopener noreferrer"
-                target="_blank"
-                role="button">DEMO</a>
-            <a  tabindex="-1"
-                href="https://github.com/usjulija/JungleMemoryGame"
-                rel="noopener noreferrer"
-                target="_blank"
-                role="button">CODE</a>
-          </article>
-        </div>
+    <section>
+      <h2 class="main-heading">Recent Projects</h2>
+      <div id="projects">
       </div>
     </section>
     <section id="contact">
@@ -363,7 +134,7 @@
               rel="noopener noreferrer"
               target="_blank">
               <svg role="button" aria-label="link to my linedin" xmlns="http://www.w3.org/2000/svg" tabindex="0" width="45" height="45" version="1" viewBox="0 0 486 486">
-                <path fill="#280004" d="M243 0a243 243 0 1 0 0 486 243 243 0 0 0 0-486zm-61 361h-60V148h60v213zm-28-226a28 28 0 1 1 0-57 28 28 0 0 1 0 57zm241 226h-61V229c0-15-4-26-23-26-31 0-37 26-37 26v132h-61V148h61v21c8-7 30-21 60-21 20 0 61 12 61 83v130z"/>
+                <path fill="#261423" d="M243 0a243 243 0 1 0 0 486 243 243 0 0 0 0-486zm-61 361h-60V148h60v213zm-28-226a28 28 0 1 1 0-57 28 28 0 0 1 0 57zm241 226h-61V229c0-15-4-26-23-26-31 0-37 26-37 26v132h-61V148h61v21c8-7 30-21 60-21 20 0 61 12 61 83v130z"/>
               </svg>
             </a>
             <a tabindex="-1"
@@ -372,7 +143,7 @@
               rel="noopener noreferrer"
               target="_blank">
               <svg role="button" aria-label="link to my codepen" tabindex="0" xmlns="http://www.w3.org/2000/svg" width="45" height="45" version="1" viewBox="0 0 32 32">
-                <path fill="#280004" d="M17 0h-3L1 9l-1 2v10l2 2 12 8h3l13-8 1-2V11l-1-2-13-9zm10 11l-5 3-5-3V4l10 7zM14 4v6l-5 4-4-3 9-7zM3 14l3 2-3 2v-4zm11 13l-9-6 4-3 5 3v6zm-2-11l3-2 4 2-3 2-4-2zm5 11v-6l5-3 5 3-10 6zm11-9l-3-2 3-2v4z"/>
+                <path fill="#261423" d="M17 0h-3L1 9l-1 2v10l2 2 12 8h3l13-8 1-2V11l-1-2-13-9zm10 11l-5 3-5-3V4l10 7zM14 4v6l-5 4-4-3 9-7zM3 14l3 2-3 2v-4zm11 13l-9-6 4-3 5 3v6zm-2-11l3-2 4 2-3 2-4-2zm5 11v-6l5-3 5 3-10 6zm11-9l-3-2 3-2v4z"/>
               </svg>
             </a>
             <a tabindex="-1"
@@ -381,7 +152,7 @@
               rel="noopener noreferrer"
               target="_blank">
               <svg role="button" aria-label="link to my github" tabindex="0" xmlns="http://www.w3.org/2000/svg" width="45" height="45" version="1" viewBox="0 0 512 512">
-                <path fill="#280004" d="M256 5a257 257 0 0 0-81 501c13 3 18-5 18-12l-1-44c-71 16-86-34-86-34-12-30-28-38-28-38-24-16 1-16 1-16 26 2 39 27 39 27 23 39 60 28 75 21 2-16 9-28 16-34-57-7-116-29-116-127 0-28 10-51 26-69-3-7-11-33 3-68 0 0 21-7 70 26a244 244 0 0 1 128 0c49-33 70-26 70-26 14 35 6 61 3 68 16 18 26 41 26 69 0 99-60 120-117 127 10 8 18 23 18 47v71c0 7 4 15 17 12A257 257 0 0 0 256 5z" class="active-path"/>
+                <path fill="#261423" d="M256 5a257 257 0 0 0-81 501c13 3 18-5 18-12l-1-44c-71 16-86-34-86-34-12-30-28-38-28-38-24-16 1-16 1-16 26 2 39 27 39 27 23 39 60 28 75 21 2-16 9-28 16-34-57-7-116-29-116-127 0-28 10-51 26-69-3-7-11-33 3-68 0 0 21-7 70 26a244 244 0 0 1 128 0c49-33 70-26 70-26 14 35 6 61 3 68 16 18 26 41 26 69 0 99-60 120-117 127 10 8 18 23 18 47v71c0 7 4 15 17 12A257 257 0 0 0 256 5z" class="active-path"/>
               </svg>
             </a>
           </div>
@@ -399,14 +170,11 @@
       </p>
     </footer>
   </main>
-
-  <!--build:js js/main.min.js -->
-  <script src="compiled/app.js"></script>
-  <!-- endbuild -->
-  <!-- ref. https://github.com/cferdinandi/smooth-scroll -->
+  <script src="js/galaxy.js"></script>
+  <script src="js/app.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
   <script>
-  	var scroll = new SmoothScroll('a[href*="#"]');
+    var scroll = new SmoothScroll('a[href*="#"]');
   </script>
 </body>
 </html>
