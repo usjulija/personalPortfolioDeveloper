@@ -10,16 +10,6 @@
     "starterRepository": "from scratch",
     "description": "The game is designed to test memory - the user has to find matching pairs of cards. The game is developed from scratch using HTML, CSS, and JavaScript (ES6 syntax). The page is designed in jungle style and is fully responsive."
   }, {
-    "id": 1,
-    "image": "./images/1.png",
-    "name": "Cosmic Jumper",
-    "date": "May, 2018",
-    "code": "https://github.com/usjulija/CosmicJumper",
-    "demo": "https://usjulija.github.io/CosmicJumper/",
-    "resources": "Udacity project",
-    "starterRepository": "https://github.com/udacity/frontend-nanodegree-arcade-game",
-    "description": "The game is inspired by \"frogger\" - the player should cross the space avoiding asteroids and a toxic area in order to reach the other edge of the canvas. The game is available only for the desktop. The game was created using Object Oriented JavaScript and HTML canvas."
-  }, {
     "id": 2,
     "image": "./images/2.png",
     "name": "Restaurant App",
@@ -63,11 +53,21 @@
     "id": 6,
     "image": "./images/6.png",
     "name": "Weather App",
-    "date": "July, 2018",
+    "date": "October, 2018",
     "code": "https://github.com/usjulija/PWAweaterApp",
     "demo": "https://usjulija.github.io/PWAweaterApp/",
     "resources": "Google codelab",
     "starterRepository": "from scratch",
     "description": "Progressive Web Application, displaying 5-days weather forecast based on current location or selected city. It is possible to choose temperature units: Fahrenheit or Celsius. The user is able to add multiple cities to the app. The app is designed using JavaScript ES6 syntax, SCSS, and SVG animation."
+  }, {
+    "id": 7,
+    "image": "./images/7.png",
+    "name": "Furniture e-shop",
+    "date": "January, 2019",
+    "code": "https://github.com/usjulija/vuduFurniture",
+    "demo": "http://vudufurniture.com",
+    "resources": "Personal project",
+    "starterRepository": "from scratch",
+    "description": "Furniture e-shop page, displaying the gallery of products. The user is allowed to filter out products by style. It is possible to add or remove products from the shop gallery by editing the data.json file."
   }
 ]

@@ -1,6 +1,6 @@
 # Personal portfolio
 
-This is my personal portfolio page, built with HTML SASS and ES6. Visuals are presented in SVG formal.
+This is my personal portfolio page, built with HTML, SCSS and ES6. Projects are added dynamically from data.json file using JavaScript fetch().
 
 [Online preview](https://www.julia-juls.com/)
 
