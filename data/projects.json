@@ -20,16 +20,6 @@
     "starterRepository": "https://github.com/udacity/mws-restaurant-stage-1",
     "description": "Mobile-ready web application displays restaurants of Klaipeda region, Lithuania. The responsive design implemented using CSS media queries. The application is accessible for screen reader users. The page is cached using service worker, therefore the app is available offline."
   }, {
-    "id": 3,
-    "image": "./images/3.png",
-    "name": "Owl Reads",
-    "date": "July, 2018",
-    "code": "https://github.com/usjulija/myOwlReads",
-    "demo": "https://myowlreads.herokuapp.com/",
-    "resources": "Udacity project",
-    "starterRepository": "https://github.com/udacity/reactnd-project-myreads-starter",
-    "description": "The bookshelf app that allows you to select and categorize books you have read, are currently reading, or want to read. The search-page and book-shelf-changing functionality are implemented using ReactJS."
-  }, {
     "id": 4,
     "image": "./images/4.png",
     "name": "National Parks",
@@ -69,5 +59,15 @@
     "resources": "Personal project",
     "starterRepository": "from scratch",
     "description": "Furniture e-shop page, displaying the gallery of products. The user is allowed to filter out products by style. It is possible to add or remove products from the shop gallery by editing the data.json file."
+  }, {
+    "id": 8,
+    "image": "./images/8.png",
+    "name": "Book Store",
+    "date": "February, 2019",
+    "code": "https://github.com/usjulija/bookStore",
+    "demo": "https://redmore-books.netlify.com/",
+    "resources": "Personal project",
+    "starterRepository": "from scratch",
+    "description": "Book store project, built with ReactJS. The user may sort books by category or search by name. It is possible to add books to the shopping cart. Store manager may update, delete or add books."
   }
 ]
